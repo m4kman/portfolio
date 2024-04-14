@@ -24,7 +24,7 @@ function Navbar() {
       transition={{
         duration: 0.5,
       }}
-      className="absolute flex w-full flex-col"
+      className="absolute z-[100] flex w-full flex-col"
     >
       <div
         className={cn(
