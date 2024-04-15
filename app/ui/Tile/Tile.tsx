@@ -6,7 +6,7 @@ export function Tile() {
   return (
     <motion.div
       whileHover={{ backgroundColor: "#a5b4fc" }}
-      transition={{ duration: 2, ease: "easeOut" }}
+      transition={{ duration: 1, ease: "easeOut" }}
       className="aspect-square bg-inherit"
     />
   );
