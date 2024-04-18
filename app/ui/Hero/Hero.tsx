@@ -23,7 +23,7 @@ function Hero() {
   return (
     <div
       onMouseMove={(e) => handleMouseMove(e)}
-      className="grid h-screen w-screen place-items-center font-sans text-neutral-50"
+      className="grid h-screen place-items-center font-sans text-neutral-50"
     >
       <section
         className="absolute grid h-screen w-full grid-cols-[repeat(24,minmax(0,1fr))]
