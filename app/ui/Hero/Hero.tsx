@@ -36,10 +36,20 @@ function Hero() {
 
       <div className="z-50">
         <motion.div
+          initial={{ y: 100 }}
+          animate={{ y: 0 }}
+          transition={{ duration: 0.8 }}
+        >
+          <h2 className="text-center font-cursive text-4xl text-[rgb(238,242,255)]">
+            Hi, I'm
+          </h2>
+        </motion.div>
+        <motion.div
           initial={{ opacity: 0, y: 100 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           ref={plane}
+          className="text-[rgb(238,242,255)]"
         >
           <HeroText />
         </motion.div>

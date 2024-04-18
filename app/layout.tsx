@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { GeistSans } from "geist/font/sans";
 import { GeistMono } from "geist/font/mono";
+import { pacifico } from "@/app/lib/fonts";
+
 import Navbar from "@/app/ui/Navbar";
 
 import "./globals.css";
@@ -16,8 +18,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${GeistSans.variable} ${GeistMono.variable}`}>
-      <body className="h-screen bg-gradient-to-tr from-slate-950 to-slate-900">
+    <html
+      lang="en"
+      className={`${GeistSans.variable} ${GeistMono.variable} ${pacifico.variable}`}
+    >
+      <body className="h-screen bg-slate-950">
         <Navbar />
         {children}
       </body>

@@ -16,6 +16,7 @@ const config: Config = {
       fontFamily: {
         sans: ["var(--font-geist-sans)"],
         mono: ["var(--font-geist-mono)"],
+        cursive: ["var(--font-pacifico)"],
       },
       animation: {
         shimmer: "shimmer 2s linear infinite",
