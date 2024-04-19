@@ -4,9 +4,7 @@ import { motion } from "framer-motion";
 
 import HeroText from "./HeroText";
 import HeroButton from "./HeroButton";
-import Tile from "../Tile";
-
-import range from "@/app/lib/range";
+import MouseTrailGrid from "../MouseTrailGrid";
 
 function Hero() {
   const plane = React.useRef<HTMLDivElement>(null);
@@ -25,6 +23,7 @@ function Hero() {
       onMouseMove={(e) => handleMouseMove(e)}
       className="grid h-screen place-items-center font-sans"
     >
+      <MouseTrailGrid />
       <div className="z-50">
         <motion.div
           initial={{ y: 100 }}

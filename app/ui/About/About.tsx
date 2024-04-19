@@ -1,6 +1,7 @@
 "use client";
 import * as React from "react";
 import Text3d from "../Hero/Text3d";
+import MouseTrailGrid from "../MouseTrailGrid";
 
 export function About() {
   const plane = React.useRef<HTMLDivElement>(null);
@@ -16,7 +17,8 @@ export function About() {
   };
   return (
     <div className="h-screen" onMouseMove={(e) => handleMouseMove(e)}>
-      <div className="mx-auto mt-32 grid max-w-screen-xl grid-cols-2 overflow-hidden text-main">
+      <MouseTrailGrid />
+      <div className="mx-auto grid max-w-screen-xl grid-cols-2 overflow-hidden pt-32 text-main">
         <div className="z-50">
           <span className="ml-2 text-sm font-semibold text-indigo-300">
             a little background
@@ -30,7 +32,7 @@ export function About() {
             I'm Hassam. A passionate web developer and an aspiring security
             enthusiast. I've always been in love with websites and the
             technologies that empower them. This has led me to pursue a career
-            in web development. I have a major in Computer Systems Engineering.{" "}
+            in web development. I have a major in Computer Systems Engineering.
           </p>
         </div>
       </div>
