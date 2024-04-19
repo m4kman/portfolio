@@ -16,11 +16,8 @@ export function About() {
   };
   return (
     <div className="h-screen" onMouseMove={(e) => handleMouseMove(e)}>
-      <div
-        className="mx-auto mt-32 grid h-screen max-w-screen-xl grid-cols-2 overflow-hidden
-          text-main"
-      >
-        <div>
+      <div className="mx-auto mt-32 grid max-w-screen-xl grid-cols-2 overflow-hidden text-main">
+        <div className="z-50">
           <span className="ml-2 text-sm font-semibold text-indigo-300">
             a little background
           </span>
@@ -28,12 +25,14 @@ export function About() {
             <Text3d primary="About" secondary="About" />
           </div>
         </div>
-        <p className="text-2xl leading-10 text-neutral-300/95">
-          I'm Hassam. A passionate web developer and an aspiring security
-          enthusiast. I've always been in love with websites and the
-          technologies that empower them. This has led me to pursue a career in
-          web development. I have a major in Computer Systems Engineering.{" "}
-        </p>
+        <div className="z-50">
+          <p className="text-2xl leading-10 text-neutral-300/95">
+            I'm Hassam. A passionate web developer and an aspiring security
+            enthusiast. I've always been in love with websites and the
+            technologies that empower them. This has led me to pursue a career
+            in web development. I have a major in Computer Systems Engineering.{" "}
+          </p>
+        </div>
       </div>
     </div>
   );

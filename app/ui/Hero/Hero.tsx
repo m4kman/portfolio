@@ -25,15 +25,6 @@ function Hero() {
       onMouseMove={(e) => handleMouseMove(e)}
       className="grid h-screen place-items-center font-sans"
     >
-      <section
-        className="absolute grid h-screen w-full grid-cols-[repeat(24,minmax(0,1fr))]
-          overflow-y-clip"
-      >
-        {range(24 * 12).map((number: number) => (
-          <Tile key={number} />
-        ))}
-      </section>
-
       <div className="z-50">
         <motion.div
           initial={{ y: 100 }}
