@@ -8,15 +8,21 @@ function Projects() {
   return (
     <div className="test pb-32">
       <div className="mx-auto max-w-screen-xl">
-        <div className="mx-auto max-w-fit text-[4vw] text-main">
+        <div className="relative mx-auto max-w-fit text-[4vw] text-main">
+          <span
+            className="absolute bottom-[-20px] right-0 min-h-fit min-w-fit text-sm font-semibold
+              text-indigo-300"
+          >
+            selected projects I've worked on
+          </span>
           <Text3d primary="Projects" secondary="Projects" />
         </div>
         <div className="mt-32 grid w-full grid-cols-3 items-center justify-center">
           {range(3).map((number) => (
             <PinContainer
               key={number}
-              title="/ui.aceternity.com"
-              href="https://twitter.com/mannupaaji"
+              title="m4kman.dev"
+              href="https://twitter.com/m4kman"
             >
               <div className="flex h-[20rem] w-[20rem] basis-full flex-col p-4 tracking-tight sm:basis-1/2">
                 <h3 className="!m-0 max-w-xs !pb-2 text-base font-bold text-slate-100">
