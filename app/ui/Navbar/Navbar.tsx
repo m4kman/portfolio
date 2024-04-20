@@ -30,7 +30,7 @@ function Navbar() {
         className={cn(
           `fixed inset-x-0 top-8 z-[5000] mx-auto flex max-w-fit items-center
           justify-center space-x-11 rounded-full border border-transparent bg-transparent
-          px-8 py-2 font-sans`,
+          px-8 py-2 font-sans backdrop-blur-lg`,
         )}
       >
         {navItems.map((navItem: any, idx: number) => (
