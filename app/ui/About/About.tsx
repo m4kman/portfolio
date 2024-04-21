@@ -3,20 +3,17 @@ import * as React from "react";
 import Text3d from "../Hero/Text3d";
 import MouseTrailGrid from "../MouseTrailGrid";
 
+import RotatePlaneOnMouse from "@/app/lib/RotatePlaneonMouse";
+
 export function About() {
   const plane = React.useRef<HTMLDivElement>(null);
   const maxRotate = 45;
-  const handleMouseMove: React.MouseEventHandler<HTMLDivElement> = (e) => {
-    const x = e.clientX / window.innerWidth;
-    const y = e.clientY / window.innerHeight;
-    const perspective = window.innerWidth * 4;
-    const rotateX = maxRotate * x - maxRotate / 2;
-    const rotateY = (maxRotate * y - maxRotate / 2) * -1;
-    if (plane.current !== null)
-      plane.current.style.transform = `perspective(${perspective}px) rotateX(${rotateY}deg) rotateY(${rotateX}deg)`;
-  };
+
   return (
-    <div className="h-screen" onMouseMove={(e) => handleMouseMove(e)}>
+    <div
+      className="h-screen"
+      onMouseMove={(e) => RotatePlaneOnMouse(e, plane, maxRotate)}
+    >
       <MouseTrailGrid />
       <div className="mx-auto grid max-w-screen-xl grid-cols-2 overflow-hidden pt-32 text-main">
         <div className="z-50">

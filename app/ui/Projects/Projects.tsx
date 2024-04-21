@@ -1,14 +1,16 @@
 import * as React from "react";
 
 import PinContainer from "@/app/ui/ProjectCard";
-import Text3d from "../Hero/Text3d";
+import MouseTrailGrid from "@/app/ui/MouseTrailGrid";
+import Text3d from "@/app/ui/Hero/Text3d";
 import range from "@/app/lib/range";
 
 function Projects() {
   return (
     <div className="test pb-32">
+      <MouseTrailGrid />
       <div className="mx-auto max-w-screen-xl">
-        <div className="relative mx-auto max-w-fit text-[4vw] text-main">
+        <div className="relative mx-auto max-w-fit text-main">
           <span
             className="absolute bottom-[-20px] right-0 min-h-fit min-w-fit text-sm font-semibold
               text-indigo-300"
@@ -17,7 +19,7 @@ function Projects() {
           </span>
           <Text3d primary="Projects" secondary="Projects" />
         </div>
-        <div className="mt-32 grid w-full grid-cols-3 items-center justify-center">
+        <div className="mt-32 grid w-full grid-cols-3 place-items-center">
           {range(3).map((number) => (
             <PinContainer
               key={number}
