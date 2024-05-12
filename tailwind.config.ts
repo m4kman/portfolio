@@ -17,6 +17,9 @@ const config: Config = {
       },
     },
     extend: {
+      fontFamily: {
+        main: ["var(--font-mona-sans)"],
+      },
       backgroundImage: {
         noise: "url(/Noise.png)",
       },
