@@ -56,7 +56,6 @@ const config: Config = {
       },
       borderRadius: {
         DEFAULT: "var(--radius)",
-        full: "var(--radius-full)",
       },
       keyframes: {
         "accordion-down": {

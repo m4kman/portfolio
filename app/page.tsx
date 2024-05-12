@@ -4,10 +4,10 @@ import Projects from "@/app/ui/Projects";
 
 export default function Home() {
   return (
-    <>
+    <div>
       <Hero />
       <About />
       <Projects />
-    </>
+    </div>
   );
 }
