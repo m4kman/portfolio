@@ -14,7 +14,11 @@ function Hero() {
         </span>
         Available for work
       </Badge>
-      <Image src={avatar} alt="Profile Picture" className="rounded-full" />
+      <Image
+        src={avatar}
+        alt="Profile Picture"
+        className="rounded-full object-cover"
+      />
       <h2 className="max-w-[815px] text-center text-5xl font-normal leading-snug">
         <span
           className="bg-gradient-to-r from-[#3F64E9] via-[#E93F3F] to-[#FFB800] bg-clip-text

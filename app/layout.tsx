@@ -31,7 +31,7 @@ export default function RootLayout({
           <Navbar />
         </div>
         {children}
-        <div className="pointer-events-none absolute inset-0 bg-noise opacity-[.05]"></div>
+        <div className="pointer-events-none absolute inset-0 bg-noise opacity-[.06]"></div>
       </body>
     </html>
   );
