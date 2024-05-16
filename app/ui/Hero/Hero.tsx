@@ -28,14 +28,14 @@ function Hero() {
         </span>{" "}
         software engineer and aspiring security enthusiast
       </h2>
-      <p className="text-foreground/80">
+      <p className="text-[20px] text-foreground/80">
         I like writing code and writing about it.
       </p>
       <div className="flex gap-8">
-        <Button className="px-9 py-6 text-[20px] font-normal uppercase">
+        <Button className="px-12 py-7 text-[20px] font-normal uppercase">
           Get in Touch
         </Button>
-        <Button className="px-9 py-6 text-[20px] font-normal uppercase">
+        <Button className="px-12 py-7 text-[20px] font-normal uppercase">
           View Resume
         </Button>
       </div>

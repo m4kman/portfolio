@@ -59,4 +59,12 @@
   body {
     @apply bg-background text-foreground;
   }
+  .text-stroke {
+    color: #0f0f0f;
+    text-shadow:
+      -1px -1px 0 rgba(255, 255, 255, 0.6),
+      1px -1px 0 rgba(255, 255, 255, 0.6),
+      -1px 1px 0 rgba(255, 255, 255, 0.6),
+      1px 1px 0 rgba(255, 255, 255, 0.6);
+  }
 }

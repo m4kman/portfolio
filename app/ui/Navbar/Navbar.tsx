@@ -15,7 +15,7 @@ const navItems = [
 
 function Navbar() {
   return (
-    <nav className="flex items-center justify-between px-20 pt-12">
+    <nav className="flex items-center justify-between px-40 pt-12">
       <Link href="/">
         <Image width={48} height={48} src={Logo} alt="My Logo" />
       </Link>

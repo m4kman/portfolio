@@ -27,7 +27,7 @@ export default function RootLayout({
       lang="en"
       className={`${myFont.variable} dark min-h-[100vh] scroll-smooth font-main`}
     >
-      <body className="relative min-h-screen overflow-x-hidden px-40">
+      <body className="relative min-h-screen overflow-x-hidden">
         <Gradients />
         <div className="mx-auto w-full">
           <Navbar />
