@@ -7,8 +7,8 @@ import Gradients from "@/app/ui/Gradients";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Hassam Khan",
-  description: "Hassam's Portfolio",
+  title: "Hassam 'm4kman' Khan",
+  description: "m4kman's Portfolio",
 };
 
 const myFont = localFont({
