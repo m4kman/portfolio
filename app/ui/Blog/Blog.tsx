@@ -46,7 +46,7 @@ function Blog() {
         )}
       </div>
       <Link
-        className="mt-4 flex items-center gap-[18px] font-semibold"
+        className="mt-4 flex max-w-fit items-center gap-[18px] font-semibold"
         href="/blog"
       >
         More articles
