@@ -9,10 +9,11 @@ export default function Home() {
     <div className="pb-28">
       <Hero />
       <Marquee>Projects</Marquee>
-      <Blog />
-      <Marquee>Blog</Marquee>
-      <About />
       <Projects />
+      <Marquee>Blog</Marquee>
+      <Blog />
+      <Marquee>About</Marquee>
+      <About />
     </div>
   );
 }
