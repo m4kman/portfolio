@@ -19,6 +19,7 @@ const config: Config = {
     extend: {
       fontFamily: {
         main: ["var(--font-mona-sans)"],
+        chakra: ["var(--font-chakra-petch)"],
       },
       backgroundImage: {
         noise: "url(/Noise.png)",

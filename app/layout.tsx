@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
+import { Chakra_Petch } from "next/font/google";
 
 import Navbar from "@/app/ui/Navbar";
 import Gradients from "@/app/ui/Gradients";
@@ -17,6 +18,13 @@ const myFont = localFont({
   variable: "--font-mona-sans",
 });
 
+const chakraPetch = Chakra_Petch({
+  subsets: ["latin"],
+  display: "swap",
+  weight: ["500"],
+  variable: "--font-chakra-petch",
+});
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -25,7 +33,8 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${myFont.variable} dark min-h-[100vh] scroll-smooth font-main`}
+      className={`${myFont.variable} ${chakraPetch.variable} dark min-h-[100vh] scroll-smooth
+      font-main`}
     >
       <body className="relative min-h-screen overflow-x-hidden">
         <Gradients />
