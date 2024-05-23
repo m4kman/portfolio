@@ -1,29 +1,4 @@
-import AboutCard from "@/app/ui/AboutCard";
-
-const ABOUT_DESCRIPTIONS = [
-  {
-    id: crypto.randomUUID(),
-    description: "I like writing code and blogging about it",
-  },
-  {
-    id: crypto.randomUUID(),
-    description: "I am a Computer Systems Engineering Major",
-  },
-  {
-    id: crypto.randomUUID(),
-    description: "23 years old, passionate about coding as it gives me joy",
-  },
-  {
-    id: crypto.randomUUID(),
-    description:
-      "I don’t limit myself to a one framework or libraries, rather I enjoy playing around with various",
-  },
-  {
-    id: crypto.randomUUID(),
-    description:
-      "I love gaming, and that’s what you’ll find me do in my free time",
-  },
-];
+import AboutCards from "@/app/ui/AboutCards";
 
 function About() {
   return (
@@ -34,15 +9,8 @@ function About() {
           a lil something about me
         </span>
       </div>
-      <div className="flex flex-wrap justify-center">
-        {ABOUT_DESCRIPTIONS.map(
-          (
-            { id, description }: { id: string; description: string },
-            idx: number,
-          ) => (
-            <AboutCard i={idx} key={id} description={description} />
-          ),
-        )}
+      <div className="relative flex h-[500px] justify-center">
+        <AboutCards />
       </div>
     </>
   );
