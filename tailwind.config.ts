@@ -20,6 +20,7 @@ const config: Config = {
       fontFamily: {
         main: ["var(--font-mona-sans)"],
         chakra: ["var(--font-chakra-petch)"],
+        dancing: ["var(--font-dancing-script)"],
       },
       backgroundImage: {
         noise: "url(/Noise.png)",

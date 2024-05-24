@@ -12,10 +12,16 @@ export const metadata: Metadata = {
   description: "m4kman's Portfolio",
 };
 
-const myFont = localFont({
+const monaSans = localFont({
   src: "./fonts/Mona-Sans.woff2",
   display: "swap",
   variable: "--font-mona-sans",
+});
+
+const dancingScript = localFont({
+  src: "./fonts/DancingScript.woff2",
+  display: "swap",
+  variable: "--font-dancing-script",
 });
 
 const chakraPetch = Chakra_Petch({
@@ -33,8 +39,8 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${myFont.variable} ${chakraPetch.variable} dark min-h-[100vh] scroll-smooth
-      font-main`}
+      className={`${monaSans.variable} ${chakraPetch.variable} ${dancingScript.variable} dark
+      min-h-[100vh] scroll-smooth font-main`}
     >
       <body className="relative min-h-screen overflow-x-hidden">
         <Gradients />
