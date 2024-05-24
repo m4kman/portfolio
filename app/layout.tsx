@@ -43,7 +43,8 @@ export default function RootLayout({
       min-h-[100vh] scroll-smooth font-main`}
     >
       <body className="relative min-h-screen overflow-x-hidden">
-        <Gradients />
+        <Gradients position="-top-64" />
+        {/* <Gradients position="-bottom-0 overflow-hidden" /> */}
         <div className="mx-auto w-full">
           <Navbar />
         </div>

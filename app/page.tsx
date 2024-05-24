@@ -4,10 +4,11 @@ import Projects from "@/app/ui/Projects";
 import Marquee from "@/app/ui/Marquee";
 import Blog from "@/app/ui/Blog";
 import Contact from "@/app/ui/Contact";
+import Footer from "@/app/ui/Footer";
 
 export default function Home() {
   return (
-    <div className="pb-28">
+    <div>
       <Hero />
       <Marquee>Projects</Marquee>
       <Projects />
@@ -17,6 +18,7 @@ export default function Home() {
       <About />
       <Marquee>Contact</Marquee>
       <Contact />
+      <Footer />
     </div>
   );
 }

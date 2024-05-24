@@ -4,7 +4,7 @@ import Image from "next/image";
 
 import { Button } from "@/app/ui/button";
 
-import Logo from "./Logo.svg";
+import Logo from "@/app/assets/Logo.svg";
 
 const navItems = [
   { name: "Home", link: "/" },
