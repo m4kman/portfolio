@@ -3,6 +3,7 @@ import About from "@/app/ui/About";
 import Projects from "@/app/ui/Projects";
 import Marquee from "@/app/ui/Marquee";
 import Blog from "@/app/ui/Blog";
+import Contact from "@/app/ui/Contact";
 
 export default function Home() {
   return (
@@ -14,6 +15,8 @@ export default function Home() {
       <Blog />
       <Marquee>About</Marquee>
       <About />
+      <Marquee>Contact</Marquee>
+      <Contact />
     </div>
   );
 }
