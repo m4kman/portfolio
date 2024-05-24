@@ -44,7 +44,6 @@ export default function RootLayout({
     >
       <body className="relative min-h-screen overflow-x-hidden">
         <Gradients position="-top-64" />
-        {/* <Gradients position="-bottom-0 overflow-hidden" /> */}
         <div className="mx-auto w-full">
           <Navbar />
         </div>
