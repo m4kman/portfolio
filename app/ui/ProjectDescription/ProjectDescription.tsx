@@ -8,13 +8,16 @@ function ProjectDescription({
   stack: string[];
 }) {
   return (
-    <div className="mt-6 flex flex-col gap-5">
+    <div className="mt-6 flex flex-col gap-5 text-foreground/90">
       <p className="max-w-[40ch] text-balance text-lg font-normal">
         {description}
       </p>
 
-      <div className="flex items-center gap-4">
-        <Link className="flex items-center gap-2" href="#">
+      <div className="flex items-center gap-4 text-gray-300/80">
+        <Link
+          className="flex items-center gap-2 hover:text-foreground"
+          href="#"
+        >
           <span className="text-base font-medium">GitHub</span>
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -29,7 +32,10 @@ function ProjectDescription({
             />
           </svg>
         </Link>
-        <Link className="flex items-center gap-2" href="#">
+        <Link
+          className="flex items-center gap-2 hover:text-foreground"
+          href="#"
+        >
           <span className="text-base font-medium">Live Demo</span>
           <svg
             xmlns="http://www.w3.org/2000/svg"
