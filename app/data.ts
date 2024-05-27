@@ -2,34 +2,38 @@ const PROJECTS = [
   {
     title: "Movieable",
     description:
-      "Originally hailing from Austria, Berlin-based photographer Matthias Leindinger is a young creative brimming with talent and ideas.",
+      "A movie search engine granting access to a vast database of movies across multiple genres, complete with detailed information for each film to help you choose your next watch.",
     github: "/movieable",
     demo: "#",
+    backdrop: "/assets/movie.png",
     stack: ["Next.js", "Tailwind", "TMDB API", "Framer Motion"],
   },
   {
-    title: "Movieable",
+    title: "Portfolio v1",
     description:
-      "Originally hailing from Austria, Berlin-based photographer Matthias Leindinger is a young creative brimming with talent and ideas.",
-    github: "/movieable",
+      "My first portfolio, powered by Next.js and Tailwind CSS, with a touch of Framer Motion for animations.",
+    github: "/portfolio",
     demo: "#",
-    stack: ["Next.js", "Tailwind", "TMDB API", "Framer Motion"],
+    backdrop: "",
+    stack: ["Next.js", "Tailwind", "Framer Motion", "Figma"],
   },
   {
-    title: "Movieable",
+    title: "Interactive MDX Blog",
     description:
-      "Originally hailing from Austria, Berlin-based photographer Matthias Leindinger is a young creative brimming with talent and ideas.",
-    github: "/movieable",
+      "An MDX blog featuring an interactive design that embeds custom, dynamic components allowing for user interaction inside the content. ",
+    github: "/interactive-blog-joy",
     demo: "#",
-    stack: ["Next.js", "Tailwind", "TMDB API", "Framer Motion"],
+    backdrop: "",
+    stack: ["Next.js", "CSS Modules", "Framer Motion", "Next MDX"],
   },
   {
-    title: "Movieable",
+    title: "Repik (ongoing)",
     description:
-      "Originally hailing from Austria, Berlin-based photographer Matthias Leindinger is a young creative brimming with talent and ideas.",
-    github: "/movieable",
+      "Restore your old, blurry images with Repik, a web app that uses AI to enhance image quality. Relive your memories in high definition.",
+    github: "/repik",
     demo: "#",
-    stack: ["Next.js", "Tailwind", "TMDB API", "Framer Motion"],
+    backdrop: "",
+    stack: ["Next.js", "Tailwind", "Replicate", "Framer Motion"],
   },
 ];
 

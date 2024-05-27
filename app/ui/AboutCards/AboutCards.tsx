@@ -12,7 +12,6 @@ function AboutCards({}) {
       const shallow = [...prevCards];
       const first = shallow.shift()!;
       shallow.push(first);
-      console.log(shallow);
       return shallow;
     });
   }

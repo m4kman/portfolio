@@ -4,13 +4,14 @@ import Image from "next/image";
 import { useTransform, useScroll, motion } from "framer-motion";
 
 import ProjectDescription from "@/app/ui/ProjectDescription";
-import projectImg from "./project-img.jpg";
+// import projectImg from "./project-img.jpg";
 
 function ProjectCard({
   title,
   description,
   github,
   demo,
+  backdrop,
   idx,
   stack,
   scrollProgress,
@@ -21,6 +22,7 @@ function ProjectCard({
   description: string;
   github: string;
   demo: string;
+  backdrop: string;
   stack: string[];
   idx: number;
   scrollProgress: any;
@@ -42,19 +44,23 @@ function ProjectCard({
       className="sticky top-0 flex h-[80vh] items-center justify-center"
     >
       <motion.div
-        className="relative h-[500px] w-[900px] rounded bg-gradient-to-b from-[#1c1c22] to-black
-          p-12 shadow-sm shadow-muted/10"
+        className="relative h-[475px] w-[900px] rounded border-2 border-muted/5 bg-gradient-to-b
+          from-[#1c1c22] to-[rgb(24,24,27)] p-12"
         style={{ top: `calc(${idx}*50px)`, scale: cardScale }}
       >
         <h1 className="mb-10 text-center text-3xl font-semibold">{title}</h1>
-        <div className="grid grid-cols-2 gap-6">
+        <div className="grid grid-cols-2 gap-8">
           <ProjectDescription description={description} stack={stack} />
           <div className="overflow-hidden rounded">
-            <motion.div style={{ scale: imgScale }} className="h-full w-full">
+            <motion.div
+              style={{ scale: imgScale }}
+              className="relative h-full w-full"
+            >
               <Image
-                src={projectImg}
+                src={backdrop}
+                fill
                 alt="Project Image"
-                className="object-cover"
+                className="h-full w-full object-cover"
               />
             </motion.div>
           </div>

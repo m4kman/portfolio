@@ -3,8 +3,6 @@ import Image from "next/image";
 import { Discord, Github, X } from "@/app/ui/FooterIcons";
 import Gradients from "@/app/ui/Gradients";
 
-import Logo from "@/app/assets/Logo.svg";
-
 function Footer() {
   return (
     <div className="relative mt-64 overflow-hidden">
@@ -14,7 +12,7 @@ function Footer() {
       <div className="border-t border-muted/20 ">
         <div className="flex justify-between px-36 py-24">
           <div className="flex flex-col gap-4">
-            <Image src={Logo} alt="Logo" width={42} height={42} />
+            <Image src="/assets/Logo.svg" alt="Logo" width={42} height={42} />
             <span className="text-sm font-thin text-foreground/80">
               2024 © All rights reserved.
             </span>

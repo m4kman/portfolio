@@ -9,7 +9,7 @@ function ProjectDescription({
 }) {
   return (
     <div className="mt-6 flex flex-col gap-5">
-      <p className="max-w-[55ch] text-balance text-lg font-normal">
+      <p className="max-w-[40ch] text-balance text-lg font-normal">
         {description}
       </p>
 

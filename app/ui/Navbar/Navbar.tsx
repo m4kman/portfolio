@@ -4,8 +4,6 @@ import Image from "next/image";
 
 import { Button } from "@/app/ui/button";
 
-import Logo from "@/app/assets/Logo.svg";
-
 const navItems = [
   { name: "Home", link: "/" },
   { name: "About", link: "/about" },
@@ -17,7 +15,7 @@ function Navbar() {
   return (
     <nav className="flex items-center justify-between px-40 pt-12">
       <Link href="/">
-        <Image width={48} height={48} src={Logo} alt="My Logo" />
+        <Image width={48} height={48} src="/assets/Logo.svg" alt="My Logo" />
       </Link>
       <ol className="flex gap-4 rounded-full bg-muted/10 px-9 py-[15px] backdrop-blur-sm">
         {navItems.map((item) => {
