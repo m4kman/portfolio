@@ -4,7 +4,6 @@ import Image from "next/image";
 import { useTransform, useScroll, motion } from "framer-motion";
 
 import ProjectDescription from "@/app/ui/ProjectDescription";
-// import projectImg from "./project-img.jpg";
 
 function ProjectCard({
   title,
@@ -45,7 +44,8 @@ function ProjectCard({
     >
       <motion.div
         className="relative h-[475px] w-[900px] rounded border-2 border-muted/5 bg-gradient-to-b
-          from-[#1c1c22] to-[rgb(24,24,27)] p-12"
+          from-[#1c1c22]/75 to-[rgb(24,24,27)]/75 p-12 shadow-sm shadow-muted/5
+          backdrop-blur-3xl"
         style={{ top: `calc(${idx}*50px)`, scale: cardScale }}
       >
         <h1 className="mb-10 text-center text-3xl font-semibold">{title}</h1>

@@ -57,8 +57,8 @@ function AboutCards({}) {
         whileDrag={{ rotate: 0, scale: 1.1, zIndex: 999 }}
       >
         <motion.div
-          className="relative grid h-[500px] w-[380px] place-items-center rounded bg-card
-            text-card-foreground shadow-lg shadow-black/25"
+          className="relative grid h-[500px] w-[380px] place-items-center rounded
+            text-card-foreground shadow-lg shadow-black/25 backdrop-blur-3xl"
           animate={{
             top: i * -10,
             zIndex: 5 - i,
@@ -67,6 +67,8 @@ function AboutCards({}) {
           style={{
             transformOrigin: "top center",
             cursor: i === 0 ? "grab" : "default",
+            backgroundColor:
+              i === 0 ? "hsl(var(--card) / 1)" : "hsl(var(--card) / 0.7)",
           }}
         >
           <span className="absolute left-0 top-0 px-6 py-4 font-dancing font-semibold">
