@@ -2,7 +2,7 @@ import Image from "next/image";
 
 import Badge from "@/app/ui/Badge";
 
-import avatar from "./pfp.png";
+import avatar from "./pf4.png";
 import { Button } from "@/app/ui/button";
 
 function Hero() {
@@ -14,11 +14,13 @@ function Hero() {
         </span>
         Available for work
       </Badge>
-      <Image
-        src={avatar}
-        alt="Profile Picture"
-        className="rounded-full object-cover"
-      />
+      <div className="max-h-[150px] max-w-[150px]">
+        <Image
+          src={avatar}
+          alt="Profile Picture"
+          className="h-full w-full object-cover"
+        />
+      </div>
       <h2 className="max-w-[815px] text-center text-5xl font-normal leading-snug">
         <span
           className="bg-gradient-to-r from-[#3F64E9] via-[#E93F3F] to-[#FFB800] bg-clip-text
