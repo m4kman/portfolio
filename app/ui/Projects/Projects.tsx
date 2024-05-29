@@ -2,7 +2,6 @@
 import { useRef } from "react";
 import ProjectCard from "@/app/ui/ProjectCard";
 import { useScroll } from "framer-motion";
-import SmoothScrolling from "@/app/ui/SmoothScrolling";
 
 import { PROJECTS } from "@/app/data";
 

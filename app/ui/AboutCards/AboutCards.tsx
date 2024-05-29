@@ -1,11 +1,12 @@
 "use client";
-import { useState } from "react";
+import { useState, useId } from "react";
 import { motion } from "framer-motion";
 
 import { ABOUT } from "@/app/data";
 
-function AboutCards({}) {
+function AboutCards({ isStacked }: { isStacked: boolean }) {
   const [cards, setCards] = useState(ABOUT);
+  const cardId = useId();
 
   function moveCardToEnd() {
     setCards((prevCards) => {
@@ -16,64 +17,81 @@ function AboutCards({}) {
     });
   }
 
+  const dragTransition = isStacked
+    ? { bounceStiffness: 700, bounceDamping: 80 }
+    : {};
+
   return cards.map(({ id, description, number }, i) => {
     let rotateX;
     let translateX = "0";
     let translateY = "0";
     let z = 0;
     if (i === 0) {
-      rotateX = 0;
-      translateX = "50px";
+      isStacked ? (rotateX = 0) : (rotateX = 4);
+      isStacked ? null : (translateX = "50px");
     } else if (i === 1) {
-      rotateX = -2;
-      translateX = "25px";
-      translateY = "25px";
+      isStacked ? (rotateX = -1) : (rotateX = 3);
+      translateY = "15px";
+      translateX = "35px";
     } else if (i === 2) {
-      rotateX = 6;
+      isStacked ? (rotateX = 1) : (rotateX = 1);
       z = 999;
       translateY = "15px";
+      translateX = "10px";
     } else if (i === 3) {
-      rotateX = 3;
+      isStacked ? (rotateX = -5) : (rotateX = -5);
       translateX = "-45px";
-      translateY = "15px";
+      translateY = "20px";
       z = 99;
     } else {
-      rotateX = -9;
-      translateX = "-70px";
-      translateY = "-15px";
+      isStacked ? (rotateX = -5) : (rotateX = -9);
+      translateX = "-85px";
+      translateY = "-10px";
     }
 
     const draggable = i === 0;
+    const layoutId = `${cardId}-${i}`;
 
     return (
       <motion.div
-        className="absolute"
-        drag={draggable}
+        layout={true}
+        layoutId={layoutId}
+        className={isStacked ? "absolute" : "static"}
+        drag={isStacked ? draggable : true}
         key={id}
         dragSnapToOrigin
-        onDragEnd={moveCardToEnd}
+        onDragEnd={isStacked ? moveCardToEnd : undefined}
         dragMomentum={false}
-        dragTransition={{ bounceStiffness: 700, bounceDamping: 80 }}
-        whileDrag={{ rotate: 0, scale: 1.1, zIndex: 999 }}
+        dragTransition={dragTransition}
+        whileDrag={{ rotate: 0, scale: 1.1, zIndex: 999999 }}
+        animate={{
+          zIndex: isStacked ? 5 - i : z,
+        }}
       >
         <motion.div
-          className="relative grid h-[500px] w-[380px] place-items-center rounded
-            text-card-foreground shadow-lg shadow-black/25 backdrop-blur-3xl"
+          className="relative grid h-[500px] w-[340px] place-items-center rounded
+            text-card-foreground shadow-lg shadow-black/25"
           animate={{
-            top: i * -10,
-            zIndex: 5 - i,
-            transform: `rotateX(${rotateX}deg) translateX(${translateX}) translateY(${translateY})`,
+            transform: `rotate(${rotateX}deg) translateX(${translateX}) translateY(${translateY})`,
           }}
+          whileDrag={{ rotate: 0 }}
           style={{
             transformOrigin: "top center",
-            cursor: i === 0 ? "grab" : "default",
-            backgroundColor:
-              i === 0 ? "hsl(var(--card) / 1)" : "hsl(var(--card) / 0.7)",
+            cursor: isStacked ? (i === 0 ? "grab" : "default") : "grab",
+            backgroundColor: !isStacked
+              ? "hsl(var(--card) / 1)"
+              : i === 0
+                ? "hsl(var(--card))"
+                : "hsl(var(--card) / 0.7)",
+            backdropFilter: isStacked ? "blur(64px)" : undefined,
           }}
         >
-          <span className="absolute left-0 top-0 px-6 py-4 font-dancing font-semibold">
+          <motion.span
+            style={{ display: isStacked ? "inline-block" : "none" }}
+            className="absolute left-0 top-0 px-6 py-4 font-dancing font-semibold"
+          >
             {number}
-          </span>
+          </motion.span>
           <h3 className="max-w-[13ch] text-center font-chakra text-[22px] leading-snug">
             {description}
           </h3>
