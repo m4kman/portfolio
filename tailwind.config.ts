@@ -23,7 +23,7 @@ const config: Config = {
         dancing: ["var(--font-dancing-script)"],
       },
       backgroundImage: {
-        noise: "url(/assets/Noise.png)",
+        noise: "url(/assets/noisee.png)",
       },
       colors: {
         // border: "hsl(var(--border))",
