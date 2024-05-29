@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import { Chakra_Petch } from "next/font/google";
 
+import { ReactLenis } from "@/app/lib/lenis";
 import Navbar from "@/app/ui/Navbar";
 import Gradients from "@/app/ui/Gradients";
 
@@ -40,14 +41,14 @@ export default function RootLayout({
     <html
       lang="en"
       className={`${monaSans.variable} ${chakraPetch.variable} ${dancingScript.variable} dark
-      min-h-[100vh] scroll-smooth font-main`}
+      min-h-[100vh] font-main`}
     >
       <body className="relative min-h-screen overflow-x-hidden">
         <Gradients position="-top-64" />
         <div className="mx-auto w-full">
           <Navbar />
         </div>
-        {children}
+        <ReactLenis root>{children}</ReactLenis>
         <div className="pointer-events-none absolute inset-0 bg-noise opacity-[.021]"></div>
       </body>
     </html>
