@@ -72,11 +72,26 @@ const config: Config = {
           from: { transform: "translateX(0)" },
           to: { transform: "translateX(calc( -100% - 2rem ))" },
         },
+        blob: {
+          "0%": {
+            transform: "scale(1)",
+          },
+          "33%": {
+            transform: "scale(1.2)",
+          },
+          "66%": {
+            transform: "scale(0.85)",
+          },
+          "100%": {
+            transform: "scale(1)",
+          },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         marquee: "marquee 20s linear infinite",
+        blob: "blob 12s infinite",
       },
     },
   },

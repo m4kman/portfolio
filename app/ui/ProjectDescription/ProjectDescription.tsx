@@ -55,8 +55,8 @@ function ProjectDescription({
         {stack.map((tech: string, idx: number) => (
           <div
             key={idx}
-            className="rounded bg-muted px-[18px] py-[6px] text-center text-[14px] font-medium
-              text-black"
+            className="pointer-events-none rounded bg-muted px-[18px] py-[6px] text-center text-[14px]
+              font-medium text-black"
           >
             <span>{tech}</span>
           </div>
