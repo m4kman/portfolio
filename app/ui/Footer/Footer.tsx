@@ -1,6 +1,6 @@
 import FooterSVG from "@/app/ui/FooterSVG";
 import Image from "next/image";
-import { Discord, Github, X } from "@/app/ui/FooterIcons";
+import { Discord, Github, X } from "@/app/ui/svgs";
 import Gradients from "@/app/ui/Gradients";
 
 function Footer() {

@@ -16,7 +16,6 @@ export default function Home() {
       <Blog />
       <Marquee>About</Marquee>
       <About />
-      <Marquee>Contact</Marquee>
       <Contact />
       <Footer />
     </div>

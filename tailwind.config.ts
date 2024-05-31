@@ -86,12 +86,36 @@ const config: Config = {
             transform: "scale(1)",
           },
         },
+        meteor: {
+          "0%": { transform: "rotate(215deg) translateX(0)", opacity: "1" },
+          "70%": { opacity: "1" },
+          "100%": {
+            transform: "rotate(215deg) translateX(-500px)",
+            opacity: "0",
+          },
+        },
+        "blob-horizontal": {
+          "0%": {
+            transform: "translate(0,0)",
+          },
+          "33%": {
+            transform: "translate(-100%, 25%)",
+          },
+          "66%": {
+            transform: "translate(100%, -25%)",
+          },
+          "100%": {
+            transform: "translate(0,0)",
+          },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         marquee: "marquee 20s linear infinite",
         blob: "blob 12s infinite",
+        "meteor-effect": "meteor 5s linear infinite",
+        "blob-horizontal": "blob-horizontal 15s infinite",
       },
     },
   },

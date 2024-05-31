@@ -21,9 +21,12 @@ function About() {
       </div>
       <Button
         onClick={() => setIsStacked(!isStacked)}
-        className="mx-auto mt-32 block"
+        className="button-hover relative mx-auto mt-32 block bg-black px-5 py-3 text-background
+          hover:text-foreground"
       >
-        {isStacked ? "Reveal All" : "Stack Cards"}
+        <span className="relative">
+          {isStacked ? "Reveal Cards" : "Stack Cards"}
+        </span>
       </Button>
     </div>
   );

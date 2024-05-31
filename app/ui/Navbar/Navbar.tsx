@@ -2,7 +2,7 @@ import * as React from "react";
 import Link from "next/link";
 import Image from "next/image";
 
-import { Button } from "@/app/ui/button";
+import ShinyButton from "@/app/ui/shiny-button";
 
 const navItems = [
   { name: "Home", link: "/" },
@@ -26,9 +26,13 @@ function Navbar() {
           );
         })}
       </ol>
-      <Button type="button" className="px-[30px] py-6 text-base font-normal">
+      {/* <Button type="button" className="px-[30px] py-6 text-base font-normal"> */}
+      {/*   <Link href="#">Press B for Resume</Link> */}
+      {/* </Button> */}
+
+      <ShinyButton>
         <Link href="#">Press B for Resume</Link>
-      </Button>
+      </ShinyButton>
     </nav>
   );
 }

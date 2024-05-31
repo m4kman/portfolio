@@ -2,8 +2,8 @@ import Image from "next/image";
 
 import Badge from "@/app/ui/Badge";
 
-import avatar from "./pf4.png";
 import { Button } from "@/app/ui/button";
+import avatar from "./pf4.png";
 
 function Hero() {
   return (
@@ -14,7 +14,7 @@ function Hero() {
         </span>
         Available for work
       </Badge>
-      <div className="max-h-[150px] max-w-[150px]">
+      <div className="z-50 max-h-[150px] max-w-[150px]">
         <Image
           src={avatar}
           alt="Profile Picture"
@@ -34,11 +34,17 @@ function Hero() {
         I like writing code and writing about it.
       </p>
       <div className="flex gap-8">
-        <Button className="px-12 py-7 text-[20px] font-normal uppercase">
-          Get in Touch
+        <Button
+          className="button-hover rounded bg-black px-12 py-[18px] text-[20px] font-normal uppercase
+            text-primary-foreground hover:text-foreground"
+        >
+          <span className="relative">Get in Touch</span>
         </Button>
-        <Button className="px-12 py-7 text-[20px] font-normal uppercase">
-          View Resume
+        <Button
+          className="button-hover rounded bg-black px-12 py-[18px] text-[20px] font-normal uppercase
+            text-primary-foreground hover:text-foreground"
+        >
+          <span className="relative">View Resume</span>
         </Button>
       </div>
     </div>

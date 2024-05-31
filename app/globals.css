@@ -67,4 +67,23 @@
       -1px 1px 0 rgba(255, 255, 255, 0.6),
       1px 1px 0 rgba(255, 255, 255, 0.6);
   }
+
+  .button-hover {
+    position: relative;
+  }
+
+  .button-hover::before {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    content: "";
+    background: hsl(var(--primary));
+    width: 130%;
+    left: -15%;
+    transform: skew(30deg);
+    transition: transform 0.45s cubic-bezier(0.3, 1, 0.8, 1);
+  }
+  .button-hover:hover::before {
+    transform: translate3d(100%, 0, 0);
+  }
 }
