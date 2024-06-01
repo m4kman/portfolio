@@ -1,26 +1,8 @@
 "use client";
 import { motion } from "framer-motion";
 import Badge from "@/app/ui/Badge";
-import BlogDetail from "@/app/ui/BlogDetail";
+import BlogList from "@/app/ui/BlogList";
 import Link from "next/link";
-
-const BLOGS = [
-  {
-    id: crypto.randomUUID(),
-    title: "How I built my first portfolio with Next.js and Tailwind",
-    date: "19th June 2024",
-  },
-  {
-    id: crypto.randomUUID(),
-    title: "Ricing my developer environment and workflow",
-    date: "19th June 2024",
-  },
-  {
-    id: crypto.randomUUID(),
-    title: "Journey to 10X engineer - New Beginnings",
-    date: "19th June 2024",
-  },
-];
 
 function Blog() {
   const arrowMotion = {
@@ -31,7 +13,7 @@ function Blog() {
   };
 
   return (
-    <div className="mx-auto max-w-fit" id="blog">
+    <div className="mx-auto max-w-fit">
       <div className="mx-auto mb-28 flex max-w-fit flex-col gap-1">
         <h1 className="text-center text-5xl font-semibold uppercase">Blog</h1>
         <span className="self-end text-sm font-medium text-accent">
@@ -40,19 +22,7 @@ function Blog() {
       </div>
       <Badge className="text-xs text-foreground/80">Featured</Badge>
       <div>
-        {BLOGS.map(
-          ({
-            id,
-            title,
-            date,
-          }: {
-            id: string;
-            title: string;
-            date: string;
-          }) => (
-            <BlogDetail key={id} title={title} date={date} />
-          ),
-        )}
+        <BlogList />
       </div>
       <motion.div initial="initial" whileHover="hover">
         <Link

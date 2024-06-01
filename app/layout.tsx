@@ -3,7 +3,7 @@ import localFont from "next/font/local";
 import { Chakra_Petch } from "next/font/google";
 
 import { ReactLenis } from "@/app/lib/lenis";
-import Navbar from "@/app/ui/Navbar";
+import Footer from "@/app/ui/Footer";
 import Gradients from "@/app/ui/Gradients";
 
 import "./globals.css";
@@ -45,10 +45,8 @@ export default function RootLayout({
     >
       <body className="relative min-h-screen overflow-x-hidden">
         <Gradients position="-top-64" />
-        <div className="mx-auto w-full">
-          <Navbar />
-        </div>
         <ReactLenis root>{children}</ReactLenis>
+        <Footer />
         <div className="pointer-events-none absolute inset-0 bg-noise opacity-[.021]"></div>
       </body>
     </html>

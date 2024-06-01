@@ -13,7 +13,7 @@ function Hero() {
       initial={{ opacity: 0, y: 60 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.7 }}
-      className="mt-[130px] flex flex-col place-items-center gap-9"
+      className="flex flex-col place-items-center gap-9"
     >
       <Badge className="text-[14px]">
         <span className="relative inline-flex h-[8px] w-[8px] rounded-full bg-foreground">

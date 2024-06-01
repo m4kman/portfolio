@@ -22,7 +22,7 @@ function Footer() {
               Designed and developed by{" "}
               <span className="font-medium">m4kman</span>
             </span>
-            <div className="flex gap-4">
+            <div className="flex gap-4 fill-foreground">
               <Github width={25} height={25} />
               <X width={25} height={25} />
               <Discord width={25} height={25} />

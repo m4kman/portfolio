@@ -1,6 +1,7 @@
 "use client";
-import DragHint from "@/app/ui/DragHint";
 import { useState } from "react";
+import { motion } from "framer-motion";
+import DragHint from "@/app/ui/DragHint";
 import AboutCards from "@/app/ui/AboutCards";
 import { Button } from "@/app/ui/button";
 
@@ -8,7 +9,11 @@ function About() {
   const [isStacked, setIsStacked] = useState(true);
 
   return (
-    <div id="about">
+    <motion.div
+      initial={{ opacity: 0, y: 60 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.7 }}
+    >
       <div className="mx-auto mb-28 flex max-w-fit flex-col gap-1">
         <h1 className="text-center text-5xl font-semibold uppercase">About</h1>
         <span className="self-end text-sm font-medium text-accent">
@@ -28,7 +33,7 @@ function About() {
           {isStacked ? "Reveal Cards" : "Stack Cards"}
         </span>
       </Button>
-    </div>
+    </motion.div>
   );
 }
 

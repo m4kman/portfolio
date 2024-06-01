@@ -6,15 +6,12 @@ import { cn } from "@/app/lib/cn";
 export const LampContainer = ({
   children,
   className,
-  id,
 }: {
   children: React.ReactNode;
   className?: string;
-  id: string;
 }) => {
   return (
     <div
-      id={id}
       className={cn(
         `relative z-0 flex min-h-screen w-full flex-col items-center justify-center
         overflow-hidden rounded bg-background`,

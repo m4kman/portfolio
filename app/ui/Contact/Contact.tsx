@@ -23,8 +23,8 @@ function Contact() {
   }
 
   return (
-    <div className="flex flex-col items-center justify-center">
-      <LampContainer id="contact" className="mt-52">
+    <div className="mt-52 flex flex-col items-center justify-center">
+      <LampContainer className="">
         <motion.h1
           initial={{ opacity: 0.5, y: 100 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -61,7 +61,8 @@ function Contact() {
             >
               <Link
                 href=""
-                className="flex flex-col items-center justify-center gap-4 fill-foreground"
+                className="flex flex-col items-center justify-center gap-4 fill-foreground
+                  hover:fill-foreground/80 hover:text-foreground/90"
               >
                 <WhatsApp width="2em" height="2em" className="fill-inherit" />
                 <span className="text-sm font-medium">WhatsApp</span>
@@ -71,7 +72,8 @@ function Contact() {
               whileHover={{
                 scale: 1.02,
               }}
-              className="flex cursor-pointer flex-col items-center justify-center gap-4"
+              className="flex cursor-pointer flex-col items-center justify-center gap-4
+                hover:text-foreground/90"
             >
               <Mail size={32} />
               <span className="mt-0.5 text-sm font-medium">Email</span>
@@ -84,7 +86,8 @@ function Contact() {
               <Link
                 href="https://x.com/m4kman"
                 target="_blank"
-                className="flex flex-col items-center justify-center gap-4"
+                className="flex flex-col items-center justify-center gap-4 fill-foreground
+                  hover:fill-foreground/80 hover:text-foreground/90"
               >
                 <X width="2em" height="2em" />
                 <span className="mt-0.5 text-sm font-medium">X (Twitter)</span>
