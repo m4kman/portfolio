@@ -42,9 +42,10 @@ function Contact() {
       </LampContainer>
 
       <div
-        className="group relative flex w-[850px] -translate-y-28 flex-col items-center
+        className="group relative flex w-[850px] -translate-y-36 flex-col items-center
           justify-center gap-4 overflow-hidden rounded border border-muted/10
-          bg-gradient-to-b from-[#1c1c1c]/50 to-[#18181B]/50 p-16 backdrop-blur-3xl"
+          bg-gradient-to-b from-[#1c1c1c]/50 to-[#18181B]/50 p-16 shadow-md shadow-muted/5
+          backdrop-blur-3xl"
         onMouseMove={handleMouseMove}
       >
         <div className="z-50 flex flex-col items-center justify-center gap-4">
@@ -53,34 +54,52 @@ function Contact() {
             Drop me an email or a message, and I'll get back to you promptly.
           </p>
           <div className="mt-8 flex items-center justify-center gap-8">
-            <Link
-              href=""
-              className="flex flex-col items-center justify-center gap-4"
+            <motion.div
+              whileHover={{
+                scale: 1.02,
+              }}
             >
-              <WhatsApp width="2em" height="2em" />
-              <span className="text-sm font-medium">WhatsApp</span>
-            </Link>
-            <div className="flex cursor-pointer flex-col items-center justify-center gap-4">
+              <Link
+                href=""
+                className="flex flex-col items-center justify-center gap-4 fill-foreground"
+              >
+                <WhatsApp width="2em" height="2em" className="fill-inherit" />
+                <span className="text-sm font-medium">WhatsApp</span>
+              </Link>
+            </motion.div>
+            <motion.div
+              whileHover={{
+                scale: 1.02,
+              }}
+              className="flex cursor-pointer flex-col items-center justify-center gap-4"
+            >
               <Mail size={32} />
               <span className="mt-0.5 text-sm font-medium">Email</span>
-            </div>
-            <Link
-              href=""
-              className="flex flex-col items-center justify-center gap-4"
+            </motion.div>
+            <motion.div
+              whileHover={{
+                scale: 1.02,
+              }}
             >
-              <X width="2em" height="2em" />
-              <span className="mt-0.5 text-sm font-medium">X (Twitter)</span>
-            </Link>
+              <Link
+                href="https://x.com/m4kman"
+                target="_blank"
+                className="flex flex-col items-center justify-center gap-4"
+              >
+                <X width="2em" height="2em" />
+                <span className="mt-0.5 text-sm font-medium">X (Twitter)</span>
+              </Link>
+            </motion.div>
           </div>
         </div>
-        <Meteors number={25} />
+        <Meteors number={20} />
         <div
           className="absolute bottom-0 left-0 h-48 w-48 animate-blob rounded-full bg-accent/80
             opacity-50 blur-3xl"
         />
         <div
           className="absolute inset-y-0 right-0 h-48 w-48 animate-blob rounded-full bg-muted/80
-            opacity-40 blur-3xl"
+            opacity-35 blur-3xl"
         />
         <motion.div
           className="pointer-events-none absolute inset-0 opacity-0 blur-xl backdrop-blur-3xl

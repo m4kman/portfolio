@@ -1,3 +1,5 @@
+"use client";
+import { motion } from "framer-motion";
 import Badge from "@/app/ui/Badge";
 import BlogDetail from "@/app/ui/BlogDetail";
 import Link from "next/link";
@@ -21,6 +23,13 @@ const BLOGS = [
 ];
 
 function Blog() {
+  const arrowMotion = {
+    initial: {},
+    hover: {
+      translateX: "3px",
+    },
+  };
+
   return (
     <div className="mx-auto max-w-fit">
       <div className="mx-auto mb-28 flex max-w-fit flex-col gap-1">
@@ -45,24 +54,29 @@ function Blog() {
           ),
         )}
       </div>
-      <Link
-        className="mt-4 flex max-w-fit items-center gap-[18px] font-semibold"
-        href="/blog"
-      >
-        More articles
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 20 20"
-          fill="currentColor"
-          className="h-5 w-5"
+      <motion.div initial="initial" whileHover="hover">
+        <Link
+          className="group mt-4 flex max-w-fit items-center gap-3 font-semibold
+            hover:text-foreground/90"
+          href="/blog"
         >
-          <path
-            fillRule="evenodd"
-            d="M3 10a.75.75 0 0 1 .75-.75h10.638L10.23 5.29a.75.75 0 1 1 1.04-1.08l5.5 5.25a.75.75 0 0 1 0 1.08l-5.5 5.25a.75.75 0 1 1-1.04-1.08l4.158-3.96H3.75A.75.75 0 0 1 3 10Z"
-            clipRule="evenodd"
-          />
-        </svg>
-      </Link>
+          More articles
+          <motion.div variants={arrowMotion}>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+              className="h-5 w-5"
+            >
+              <path
+                fillRule="evenodd"
+                d="M3 10a.75.75 0 0 1 .75-.75h10.638L10.23 5.29a.75.75 0 1 1 1.04-1.08l5.5 5.25a.75.75 0 0 1 0 1.08l-5.5 5.25a.75.75 0 1 1-1.04-1.08l4.158-3.96H3.75A.75.75 0 0 1 3 10Z"
+                clipRule="evenodd"
+              />
+            </svg>
+          </motion.div>
+        </Link>
+      </motion.div>
     </div>
   );
 }

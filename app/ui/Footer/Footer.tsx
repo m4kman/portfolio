@@ -5,7 +5,7 @@ import Gradients from "@/app/ui/Gradients";
 
 function Footer() {
   return (
-    <div className="relative mt-64 overflow-hidden">
+    <div className="relative mt-48 overflow-hidden">
       <div className="-mb-3 flex justify-center">
         <FooterSVG />
       </div>
