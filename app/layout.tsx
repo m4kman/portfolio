@@ -40,8 +40,8 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${monaSans.variable} ${chakraPetch.variable} ${dancingScript.variable} dark
-      min-h-[100vh] font-main`}
+      className={`${monaSans.variable} ${chakraPetch.variable} ${dancingScript.variable}
+      no-scrollbar dark min-h-[100vh] font-main`}
     >
       <body className="relative min-h-screen overflow-x-hidden">
         <Gradients position="-top-64" />

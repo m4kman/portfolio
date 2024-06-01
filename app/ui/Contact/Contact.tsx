@@ -24,7 +24,7 @@ function Contact() {
 
   return (
     <div className="flex flex-col items-center justify-center">
-      <LampContainer className="mt-52">
+      <LampContainer id="contact" className="mt-52">
         <motion.h1
           initial={{ opacity: 0.5, y: 100 }}
           whileInView={{ opacity: 1, y: 0 }}

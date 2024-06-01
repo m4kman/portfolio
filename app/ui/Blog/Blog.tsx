@@ -31,7 +31,7 @@ function Blog() {
   };
 
   return (
-    <div className="mx-auto max-w-fit">
+    <div className="mx-auto max-w-fit" id="blog">
       <div className="mx-auto mb-28 flex max-w-fit flex-col gap-1">
         <h1 className="text-center text-5xl font-semibold uppercase">Blog</h1>
         <span className="self-end text-sm font-medium text-accent">
