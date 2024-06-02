@@ -4,7 +4,7 @@ function NotFound() {
     <div className="grid h-screen place-items-center gap-6">
       <div className="flex flex-col place-items-center gap-4">
         <h1 className="font-foreground font-main text-3xl font-medium tracking-tight">
-          You have entered the void! This page doesn't exist.
+          You have entered the void! This page doesn&apos;t exist.
         </h1>
         <p className="text-lg text-foreground/80">
           If you expected to see something here, let me know

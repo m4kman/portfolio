@@ -1,12 +1,12 @@
 "use client";
 import * as React from "react";
 import Link from "next/link";
-import Image from "next/image";
 import { motion } from "framer-motion";
 
 import { useLenis } from "@/app/lib/lenis";
 import ShinyButton from "@/app/ui/shiny-button";
 import { Github, X } from "@/app/ui/svgs";
+import Logo from "@/app/ui/Logo";
 
 const navItems = [
   { name: "Home", link: "/" },
@@ -25,7 +25,7 @@ function Navbar({ onlyNav = false }: { onlyNav?: boolean }) {
       id="home"
     >
       <Link href="/" className="absolute left-0 mx-40">
-        <Image width={40} height={40} src="/assets/Logo.svg" alt="My Logo" />
+        <Logo width={40} height={40} />
       </Link>
       <ol
         className="fixed z-[9999999] flex items-center justify-center gap-6 rounded-full

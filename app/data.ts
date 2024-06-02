@@ -5,7 +5,7 @@ const PROJECTS = [
       "A movie search engine granting access to a vast database of movies across multiple genres, complete with detailed information for each film to help you choose your next watch.",
     github: "/movieable",
     demo: "#",
-    backdrop: "/assets/movie.png",
+    backdrop: "/assets/movie.webp",
     stack: ["Next.js", "Tailwind", "TMDB API", "Framer Motion"],
   },
   {

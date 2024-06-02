@@ -2,9 +2,9 @@
 import { MouseEvent } from "react";
 import Link from "next/link";
 import { motion, useMotionValue, useMotionTemplate } from "framer-motion";
-import { Meteors } from "@/app/ui/Meteors";
+import { Meteors } from "@/app/ui/meteors";
 
-import { LampContainer } from "@/app/ui/Lamp";
+import { LampContainer } from "@/app/ui/lamp";
 import { Mail } from "lucide-react";
 import { WhatsApp, X } from "@/app/ui/svgs";
 
@@ -36,7 +36,7 @@ function Contact() {
           className="mt-8 bg-gradient-to-br from-foreground to-gray-500 bg-clip-text py-4 text-center
             text-4xl font-medium tracking-tight text-transparent md:text-7xl"
         >
-          Let's build
+          Let&apos;s build
           <br /> something together
         </motion.h1>
       </LampContainer>
@@ -51,7 +51,8 @@ function Contact() {
         <div className="z-50 flex flex-col items-center justify-center gap-4">
           <h1 className="text-5xl font-semibold">Reach Out</h1>
           <p className="text-lg font-normal text-foreground/80">
-            Drop me an email or a message, and I'll get back to you promptly.
+            Drop me an email or a message, and I&apos;ll get back to you
+            promptly.
           </p>
           <div className="mt-8 flex items-center justify-center gap-8">
             <motion.div

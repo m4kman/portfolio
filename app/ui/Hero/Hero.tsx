@@ -5,7 +5,7 @@ import Image from "next/image";
 import Badge from "@/app/ui/Badge";
 
 import { Button } from "@/app/ui/button";
-import avatar from "./pf4.png";
+import avatar from "./pf4.webp";
 
 function Hero() {
   return (
@@ -33,7 +33,7 @@ function Hero() {
           className="bg-gradient-to-r from-[#3F64E9] via-[#E93F3F] to-[#FFB800] bg-clip-text
             font-semibold text-transparent"
         >
-          Hey, I'm Hassam,
+          Hey, I&apos;m Hassam,
         </span>{" "}
         software engineer and aspiring security enthusiast
       </h2>
