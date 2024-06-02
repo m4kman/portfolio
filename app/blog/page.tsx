@@ -1,4 +1,5 @@
 import BlogList from "@/app/ui/BlogList";
+
 function Home() {
   return (
     <>
