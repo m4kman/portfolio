@@ -13,7 +13,11 @@ function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
       <div className="mx-auto w-full">
         <Navbar onlyNav={true} />
       </div>
-      <ReactLenis root>{children}</ReactLenis>
+      <ReactLenis root>
+        <div className="mx-auto flex max-w-2xl flex-col place-items-center">
+          {children}
+        </div>
+      </ReactLenis>
     </>
   );
 }
