@@ -37,19 +37,7 @@ function Navbar({ onlyNav = false }: { onlyNav?: boolean }) {
               className="cursor-pointer text-sm font-medium hover:text-foreground/85"
               key={item.name}
             >
-              <Link
-                href={item.link}
-                onClick={() => {
-                  if (item.link[0] === "#" || item.link[1] === "#") {
-                    lenis?.scrollTo(item.link, {
-                      offset: -50,
-                      duration: 1.5,
-                      lerp: 0.05,
-                    });
-                  }
-                  return;
-                }}
-              >
+              <Link href={item.link} replace={true} scroll={true}>
                 {item.name}
               </Link>
             </li>

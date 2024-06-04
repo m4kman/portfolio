@@ -1,17 +1,8 @@
-"use client";
-import { motion } from "framer-motion";
 import Badge from "@/app/ui/Badge";
 import BlogList from "@/app/ui/BlogList";
 import Link from "next/link";
 
 function Blog() {
-  const arrowMotion = {
-    initial: {},
-    hover: {
-      translateX: "3px",
-    },
-  };
-
   return (
     <div className="mx-auto max-w-fit">
       <div className="mx-auto mb-28 flex max-w-fit flex-col gap-1">
@@ -24,14 +15,14 @@ function Blog() {
       <div>
         <BlogList />
       </div>
-      <motion.div initial="initial" whileHover="hover">
+      <div className="group">
         <Link
           className="group mt-4 flex max-w-fit items-center gap-3 font-semibold
             hover:text-foreground/90"
           href="/blog"
         >
           More articles
-          <motion.div variants={arrowMotion}>
+          <div className="transition-all duration-300 group-hover:translate-x-[3px]">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 20 20"
@@ -44,9 +35,9 @@ function Blog() {
                 clipRule="evenodd"
               />
             </svg>
-          </motion.div>
+          </div>
         </Link>
-      </motion.div>
+      </div>
     </div>
   );
 }

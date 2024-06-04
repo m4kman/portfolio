@@ -1,4 +1,11 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {};
+const nextConfig = {
+  transpilePackages: ["next-mdx-remote"],
+  experimental: {
+    outputFileTracingIncludes: {
+      "/*": ["./content/**/*"],
+    },
+  },
+};
 
 export default nextConfig;

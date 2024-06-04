@@ -1,25 +1,32 @@
-"use client";
-import { motion } from "framer-motion";
+import { format } from "date-fns";
 import Link from "next/link";
-function BlogDetail({ title, date }: { title: string; date: string }) {
-  const arrowMotion = {
-    initial: {},
-    hover: {
-      transform: "translate(3px, -3px)",
-    },
-  };
+
+function BlogDetail({
+  title,
+  date,
+  slug,
+}: {
+  title: string;
+  date: string;
+  slug: string;
+}) {
+  const formattedDate = format(new Date(date), "do MMMM yyyy");
   return (
-    <motion.div
+    <div
       className="group mt-[18px] flex flex-col gap-2 border-b border-white/20 pb-4
         last:border-none last:pb-0"
-      initial="initial"
-      whileHover="hover"
     >
-      <Link href="#" className="max-w-fit group-hover:text-foreground/90">
+      <Link
+        href={`/blog/${slug}`}
+        className="max-w-fit group-hover:text-foreground/90"
+      >
         <div className="flex gap-3">
           <h3 className="font-medium">{title}</h3>
 
-          <motion.div variants={arrowMotion}>
+          <div
+            className="transition-all duration-300 group-hover:translate-x-[3px]
+              group-hover:translate-y-[-3px] group-hover:transform"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 20 20"
@@ -32,11 +39,11 @@ function BlogDetail({ title, date }: { title: string; date: string }) {
                 clipRule="evenodd"
               />
             </svg>
-          </motion.div>
+          </div>
         </div>
-        <span className="text-[13px] text-muted/60">{date}</span>
+        <span className="text-[13px] text-muted/60">{formattedDate}</span>
       </Link>
-    </motion.div>
+    </div>
   );
 }
 

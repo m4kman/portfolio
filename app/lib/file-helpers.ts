@@ -11,6 +11,7 @@ export async function getBlogPosts() {
     const blogContent = await readFile(`/content/${fileName}`);
     const { data: frontmatter } = matter(blogContent);
     blogPosts.push({
+      id: crypto.randomUUID(),
       slug: fileName.replace(".mdx", ""),
       data: frontmatter,
     });
