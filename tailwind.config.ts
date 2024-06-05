@@ -1,4 +1,7 @@
 import type { Config } from "tailwindcss";
+import { PluginAPI } from "tailwindcss/types/config";
+
+import theme from "tailwindcss/defaultTheme";
 
 const config: Config = {
   darkMode: ["class"],
@@ -56,7 +59,7 @@ const config: Config = {
           foreground: "hsl(var(--card-foreground))",
         },
       },
-      typography: ({ theme }) => ({
+      typography: (theme: PluginAPI["theme"]) => ({
         main: {
           css: {
             "--tw-prose-body": theme("colors.slate[300]"),

@@ -14,7 +14,7 @@ const PROJECTS = [
       "My first portfolio, powered by Next.js and Tailwind CSS, with a touch of Framer Motion for animations.",
     github: "/portfolio",
     demo: "#",
-    backdrop: "",
+    backdrop: "/assets/portfolio-backdrop.webp",
     stack: ["Next.js", "Tailwind", "Framer Motion", "Figma"],
   },
   {
@@ -23,7 +23,7 @@ const PROJECTS = [
       "An MDX blog featuring an interactive design that embeds custom, dynamic components allowing for user interaction inside the content. ",
     github: "/interactive-blog-joy",
     demo: "#",
-    backdrop: "",
+    backdrop: "/assets/mdx-project-backdrop.gif",
     stack: ["Next.js", "CSS Modules", "Framer Motion", "Next MDX"],
   },
   {
