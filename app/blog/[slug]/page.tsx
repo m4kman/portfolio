@@ -19,7 +19,6 @@ export async function generateMetadata({
 
 async function Home({ params }: { params: { slug: string } }) {
   const blogPost = await getPost(params.slug);
-  console.log(blogPost.frontmatter.title);
   return (
     <>
       <BlogHero

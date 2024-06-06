@@ -1,14 +1,13 @@
 import type { Config } from "tailwindcss";
 import { PluginAPI } from "tailwindcss/types/config";
 
-import theme from "tailwindcss/defaultTheme";
-
 const config: Config = {
   darkMode: ["class"],
   content: [
-    "./pages/**/*.{ts,tsx}",
-    "./components/**/*.{ts,tsx}",
-    "./app/**/*.{ts,tsx}",
+    "./pages/**/*.{ts,tsx,md,mdx}",
+    "./components/**/*.{ts,tsx,md,mdx}",
+    "./app/**/*.{ts,tsx,md,mdx}",
+    "./content/**/*.{ts,tsx,md,mdx}",
   ],
   prefix: "",
   theme: {
