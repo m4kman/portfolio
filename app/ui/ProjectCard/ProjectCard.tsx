@@ -8,8 +8,7 @@ import ProjectDescription from "@/app/ui/ProjectDescription";
 function ProjectCard({
   title,
   description,
-  github,
-  demo,
+  links,
   backdrop,
   idx,
   stack,
@@ -19,8 +18,7 @@ function ProjectCard({
 }: {
   title: string;
   description: string;
-  github: string;
-  demo: string;
+  links: [{ name: string; url: string }];
   backdrop: string;
   stack: string[];
   idx: number;
@@ -51,7 +49,11 @@ function ProjectCard({
       >
         <h1 className="mb-10 text-center text-3xl font-semibold">{title}</h1>
         <div className="grid grid-cols-2 gap-8">
-          <ProjectDescription description={description} stack={stack} />
+          <ProjectDescription
+            description={description}
+            stack={stack}
+            links={links}
+          />
           <div className="overflow-hidden rounded">
             <motion.div
               style={{ scale: imgScale }}

@@ -3,8 +3,10 @@ const PROJECTS = [
     title: "Movieable",
     description:
       "A movie search engine granting access to a vast database of movies across multiple genres, complete with detailed information for each film to help you choose your next watch.",
-    github: "/movieable",
-    demo: "#",
+    links: [
+      { name: "GitHub", url: "https://github.com/m4kman/movieable" },
+      { name: "Live Demo", url: "https://movieable.vercel.app" },
+    ],
     backdrop: "/assets/movie.webp",
     stack: ["Next.js", "Tailwind", "TMDB API", "Framer Motion"],
   },
@@ -12,8 +14,7 @@ const PROJECTS = [
     title: "Portfolio v1",
     description:
       "My first portfolio, powered by Next.js and Tailwind CSS, with a touch of Framer Motion for animations.",
-    github: "/portfolio",
-    demo: "#",
+    links: [{ name: "GitHub", url: "https://github.com/m4kman/portfolio" }],
     backdrop: "/assets/portfolio-backdrop.webp",
     stack: ["Next.js", "Tailwind", "Framer Motion", "Figma"],
   },
@@ -21,8 +22,10 @@ const PROJECTS = [
     title: "Interactive MDX Blog",
     description:
       "An MDX blog featuring an interactive design that embeds custom, dynamic components allowing for user interaction inside the content. ",
-    github: "/interactive-blog-joy",
-    demo: "#",
+    links: [
+      { name: "GitHub", url: "https://github.com/m4kman/jor-project-mdx" },
+      { name: "Live Demo", url: "https://jor-project-mdx.vercel.app" },
+    ],
     backdrop: "/assets/mdx-project-backdrop.gif",
     stack: ["Next.js", "CSS Modules", "Framer Motion", "Next MDX"],
   },
@@ -30,8 +33,10 @@ const PROJECTS = [
     title: "Repik (ongoing)",
     description:
       "Restore your old, blurry images with Repik, a web app that uses AI to enhance image quality. Relive your memories in high definition.",
-    github: "/repik",
-    demo: "#",
+    links: [
+      { name: "GitHub", url: "" },
+      { name: "Live Demo", url: "" },
+    ],
     backdrop: "",
     stack: ["Next.js", "Tailwind", "Replicate", "Framer Motion"],
   },
