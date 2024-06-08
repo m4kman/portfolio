@@ -25,8 +25,8 @@ function ProjectDescription({
       </p>
 
       <div className="flex items-center gap-4 text-gray-300/80">
-        {links.map((link) => (
-          <motion.div initial="initial" whileHover="hover">
+        {links.map((link, index) => (
+          <motion.div key={index} initial="initial" whileHover="hover">
             <Link
               className="flex items-center gap-2 hover:text-foreground"
               href={link.url}
