@@ -18,7 +18,7 @@ function ProjectCard({
 }: {
   title: string;
   description: string;
-  links: [{ name: string; url: string }];
+  links: { name: string; url: string }[];
   backdrop: string;
   stack: string[];
   idx: number;

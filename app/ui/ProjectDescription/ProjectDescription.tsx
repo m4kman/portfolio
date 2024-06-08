@@ -9,7 +9,7 @@ function ProjectDescription({
 }: {
   description: string;
   stack: string[];
-  links: [{ name: string; url: string }];
+  links: { name: string; url: string }[];
 }) {
   const arrowMotion = {
     initial: {},
