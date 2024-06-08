@@ -1,14 +1,16 @@
-import Navbar from "@/app/ui/Navbar";
+import type { Metadata } from "next";
 import Contact from "@/app/ui/Contact";
+
+export const metadata: Metadata = {
+  title: "Contact Hassam",
+  description:
+    "Contact Hassam for any queries, collaborations, or just to say hi!",
+};
+
 export default function Home() {
   return (
-    <>
-      <div className="mx-auto w-full">
-        <Navbar onlyNav={true} />
-      </div>
-      <div className="-mt-36">
-        <Contact />
-      </div>
-    </>
+    <div className="-mt-52">
+      <Contact />
+    </div>
   );
 }

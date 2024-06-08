@@ -1,10 +1,9 @@
 "use client";
 import * as React from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { motion } from "framer-motion";
 
-import { useLenis } from "@/app/lib/lenis";
-import ShinyButton from "@/app/ui/shiny-button";
 import { Github, X } from "@/app/ui/svgs";
 import Logo from "@/app/ui/Logo";
 
@@ -14,33 +13,43 @@ const navItems = [
   { name: "Contact", link: "/contact" },
 ];
 
-function Navbar({ onlyNav = false }: { onlyNav?: boolean }) {
-  const lenis = useLenis();
+function Navbar() {
+  const pathname = usePathname();
   return (
     <motion.nav
       initial={{ opacity: 0, y: -50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.7 }}
-      className="relative mb-[130px] flex items-center justify-center pt-[72px]"
+      className="relative z-50 flex items-center justify-center pt-[72px]"
       id="home"
     >
       <Link href="/" className="absolute left-0 mx-40">
         <Logo width={40} height={40} />
       </Link>
       <ol
-        className="fixed z-[9999999] flex items-center justify-center gap-6 rounded-full
-          bg-muted/10 px-9 py-[15px] backdrop-blur-md"
+        className="fixed flex items-center justify-center gap-6 rounded-full bg-muted/10 px-9
+          py-[15px] backdrop-blur-md"
       >
-        {navItems.map((item) => {
+        {navItems.map((item, index) => {
+          const layoutId = `${item.name}-${index}`;
           return (
-            <li
-              className="cursor-pointer text-sm font-medium hover:text-foreground/85"
-              key={item.name}
+            <motion.li
+              className="relative cursor-pointer text-sm font-medium hover:text-foreground/85"
+              key={index}
             >
+              {pathname === item.link && (
+                <motion.div
+                  layoutId="nav-item"
+                  key={layoutId}
+                  className="absolute inset-x-0 -bottom-2 mx-auto h-1 w-1 rounded-full bg-gradient-to-br
+                    from-gray-300 to-gray-500"
+                  transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
+                />
+              )}
               <Link href={item.link} replace={true} scroll={true}>
                 {item.name}
               </Link>
-            </li>
+            </motion.li>
           );
         })}
         <div
@@ -59,13 +68,6 @@ function Navbar({ onlyNav = false }: { onlyNav?: boolean }) {
           </Link>
         </li>
       </ol>
-      {!onlyNav ? (
-        <div className="absolute right-0 mx-40">
-          <ShinyButton>
-            <Link href="#">Press B for Resume</Link>
-          </ShinyButton>
-        </div>
-      ) : null}
     </motion.nav>
   );
 }

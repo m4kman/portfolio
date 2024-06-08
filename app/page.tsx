@@ -4,14 +4,12 @@ import Projects from "@/app/ui/Projects";
 import Marquee from "@/app/ui/Marquee";
 import Blog from "@/app/ui/Blog";
 import Contact from "@/app/ui/Contact";
-import Navbar from "./ui/Navbar";
+import ResumeCTA from "@/app/ui/ResumeCTA";
 
 export default function Home() {
   return (
     <>
-      <div className="mx-auto w-full">
-        <Navbar onlyNav={false} />
-      </div>
+      <ResumeCTA />
       <div className="mt-[130px]">
         <Hero />
         <Marquee>Projects</Marquee>
