@@ -1,3 +1,4 @@
+import Link from "next/link";
 import FooterSVG from "@/app/ui/FooterSVG";
 import Image from "next/image";
 import { Discord, Github, X } from "@/app/ui/svgs";
@@ -9,7 +10,7 @@ function Footer() {
       <div className="-mb-3 flex justify-center">
         <FooterSVG />
       </div>
-      <div className="border-t border-muted/20 ">
+      <div className="border-t border-muted/20">
         <div className="flex justify-between px-36 py-24">
           <div className="flex flex-col gap-4">
             <Image src="/assets/Logo.svg" alt="Logo" width={42} height={42} />
@@ -23,8 +24,12 @@ function Footer() {
               <span className="font-medium">m4kman</span>
             </span>
             <div className="flex gap-4 fill-foreground">
-              <Github width={25} height={25} />
-              <X width={25} height={25} />
+              <Link href="https://github.com/m4kman">
+                <Github width={25} height={25} />
+              </Link>
+              <Link href="https://x.com/m4kman">
+                <X width={25} height={25} />
+              </Link>
               <Discord width={25} height={25} />
             </div>
           </div>

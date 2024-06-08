@@ -5,21 +5,24 @@ import Marquee from "@/app/ui/Marquee";
 import Blog from "@/app/ui/Blog";
 import Contact from "@/app/ui/Contact";
 import ResumeCTA from "@/app/ui/ResumeCTA";
+import PageWrapper from "@/app/ui/PageWrapper";
 
 export default function Home() {
   return (
     <>
       <ResumeCTA />
-      <div className="mt-[130px]">
-        <Hero />
-        <Marquee>Projects</Marquee>
-        <Projects />
-        <Marquee>Blog</Marquee>
-        <Blog />
-        <Marquee>About</Marquee>
-        <About />
-        <Contact />
-      </div>
+      <PageWrapper y={40}>
+        <div className="mt-[130px]">
+          <Hero />
+          <Marquee>Projects</Marquee>
+          <Projects />
+          <Marquee>Blog</Marquee>
+          <Blog />
+          <Marquee>About</Marquee>
+          <About />
+          <Contact />
+        </div>
+      </PageWrapper>
     </>
   );
 }

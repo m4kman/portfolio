@@ -1,5 +1,3 @@
-"use client";
-import { motion } from "framer-motion";
 import Image from "next/image";
 
 import Badge from "@/app/ui/Badge";
@@ -9,12 +7,7 @@ import avatar from "./pf4.webp";
 
 function Hero() {
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 60 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.7 }}
-      className="flex flex-col place-items-center gap-9 pb-5"
-    >
+    <div className="flex flex-col place-items-center gap-9 pb-5">
       <Badge className="text-[14px]">
         <span className="relative inline-flex h-[8px] w-[8px] rounded-full bg-foreground">
           <span className="absolute inline-flex h-[8px] w-[8px] animate-ping rounded-full bg-foreground"></span>
@@ -54,7 +47,7 @@ function Hero() {
           <span className="relative">View Resume</span>
         </Button>
       </div>
-    </motion.div>
+    </div>
   );
 }
 export default Hero;
