@@ -1,5 +1,5 @@
 "use client";
-import { MouseEvent } from "react";
+import { useState, MouseEvent } from "react";
 import Link from "next/link";
 import { motion, useMotionValue, useMotionTemplate } from "framer-motion";
 import {
@@ -18,6 +18,8 @@ import { WhatsApp, X } from "@/app/ui/svgs";
 function Contact() {
   let mouseX = useMotionValue(0);
   let mouseY = useMotionValue(0);
+
+  const [showTooltip, setShowTooltip] = useState(false);
 
   const { clipboardText, setClipboardText, handleClipboardCopy } =
     useCopyToClipboard();
@@ -79,10 +81,11 @@ function Contact() {
                 <span className="text-sm font-medium">WhatsApp</span>
               </Link>
             </motion.div>
-            <div onMouseLeave={() => setClipboardText("Click to Copy")}>
+            <div>
               <TooltipProvider delayDuration={300}>
-                <Tooltip>
+                <Tooltip onOpenChange={() => setShowTooltip((prev) => !prev)}>
                   <TooltipTrigger
+                    onMouseLeave={() => setClipboardText("Click to Copy")}
                     onClick={(e) => {
                       e.preventDefault();
                       handleClipboardCopy("ihassam187@gmail.com");
@@ -99,11 +102,13 @@ function Contact() {
                       <span className="mt-0.5 text-sm font-medium">Email</span>
                     </motion.div>
                   </TooltipTrigger>
-                  <TooltipContent
-                    onPointerDownOutside={(e) => e.preventDefault()}
-                  >
-                    {clipboardText}
-                  </TooltipContent>
+                  {showTooltip && (
+                    <TooltipContent
+                      onPointerDownOutside={(e) => e.preventDefault()}
+                    >
+                      {clipboardText}
+                    </TooltipContent>
+                  )}
                 </Tooltip>
               </TooltipProvider>
             </div>

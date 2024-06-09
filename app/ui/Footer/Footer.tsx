@@ -1,4 +1,5 @@
 "use client";
+import { useState } from "react";
 import {
   Tooltip,
   TooltipContent,
@@ -13,6 +14,7 @@ import Gradients from "@/app/ui/Gradients";
 import useCopyToClipboard from "@/app/lib/useCopyToClipboard";
 
 function Footer() {
+  const [showTooltip, setShowTooltip] = useState(false);
   const { clipboardText, setClipboardText, handleClipboardCopy } =
     useCopyToClipboard();
 
@@ -49,7 +51,7 @@ function Footer() {
               </Link>
               <div onMouseLeave={() => setClipboardText("Click to Copy")}>
                 <TooltipProvider delayDuration={300}>
-                  <Tooltip>
+                  <Tooltip onOpenChange={() => setShowTooltip((prev) => !prev)}>
                     <TooltipTrigger
                       onClick={(e) => {
                         e.preventDefault();
@@ -58,13 +60,15 @@ function Footer() {
                     >
                       <Discord width={25} height={25} />
                     </TooltipTrigger>
-                    <TooltipContent
-                      onPointerDownOutside={(e) => {
-                        e.preventDefault();
-                      }}
-                    >
-                      {clipboardText}
-                    </TooltipContent>
+                    {showTooltip && (
+                      <TooltipContent
+                        onPointerDownOutside={(e) => {
+                          e.preventDefault();
+                        }}
+                      >
+                        {clipboardText}
+                      </TooltipContent>
+                    )}
                   </Tooltip>
                 </TooltipProvider>
               </div>
