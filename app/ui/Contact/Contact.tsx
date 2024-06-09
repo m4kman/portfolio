@@ -2,7 +2,14 @@
 import { MouseEvent } from "react";
 import Link from "next/link";
 import { motion, useMotionValue, useMotionTemplate } from "framer-motion";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/app/ui/tooltip";
 import { Meteors } from "@/app/ui/meteors";
+import useCopyToClipboard from "@/app/lib/useCopyToClipboard";
 
 import { LampContainer } from "@/app/ui/lamp";
 import { Mail } from "lucide-react";
@@ -11,6 +18,9 @@ import { WhatsApp, X } from "@/app/ui/svgs";
 function Contact() {
   let mouseX = useMotionValue(0);
   let mouseY = useMotionValue(0);
+
+  const { clipboardText, setClipboardText, handleClipboardCopy } =
+    useCopyToClipboard();
 
   function handleMouseMove({ clientX, clientY, currentTarget }: MouseEvent) {
     let { left, top } = currentTarget.getBoundingClientRect();
@@ -69,16 +79,34 @@ function Contact() {
                 <span className="text-sm font-medium">WhatsApp</span>
               </Link>
             </motion.div>
-            <motion.div
-              whileHover={{
-                scale: 1.02,
-              }}
-              className="flex cursor-pointer flex-col items-center justify-center gap-4
-                hover:text-foreground/90"
-            >
-              <Mail size={32} />
-              <span className="mt-0.5 text-sm font-medium">Email</span>
-            </motion.div>
+            <div onMouseLeave={() => setClipboardText("Click to Copy")}>
+              <TooltipProvider delayDuration={300}>
+                <Tooltip>
+                  <TooltipTrigger
+                    onClick={(e) => {
+                      e.preventDefault();
+                      handleClipboardCopy("ihassam187@gmail.com");
+                    }}
+                  >
+                    <motion.div
+                      whileHover={{
+                        scale: 1.02,
+                      }}
+                      className="flex cursor-pointer flex-col items-center justify-center gap-4
+                        hover:text-foreground/90"
+                    >
+                      <Mail size={32} />
+                      <span className="mt-0.5 text-sm font-medium">Email</span>
+                    </motion.div>
+                  </TooltipTrigger>
+                  <TooltipContent
+                    onPointerDownOutside={(e) => e.preventDefault()}
+                  >
+                    {clipboardText}
+                  </TooltipContent>
+                </Tooltip>
+              </TooltipProvider>
+            </div>
             <motion.div
               whileHover={{
                 scale: 1.02,

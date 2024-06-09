@@ -20,7 +20,6 @@ export async function generateMetadata({
 
 async function Home({ params }: { params: { slug: string } }) {
   const blogPost = await getPost(params.slug);
-  console.log(blogPost.content);
   return (
     <PageWrapper>
       <div className="mx-auto mt-[130px] flex max-w-2xl flex-col items-center justify-center">
