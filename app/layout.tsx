@@ -45,6 +45,7 @@ export default function RootLayout({
       no-scrollbar dark min-h-[100vh] font-main`}
     >
       <body className="relative min-h-screen overflow-x-hidden">
+        <div className="absolute -top-96 h-1 w-1" id="scroll-top-anchor"></div>
         <Gradients position="-top-64" />
         <Navbar />
         <ReactLenis root>{children}</ReactLenis>

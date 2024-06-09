@@ -3,6 +3,7 @@ import * as React from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { motion } from "framer-motion";
+import { useLenis } from "@/app/lib/lenis";
 
 import { Github, X } from "@/app/ui/svgs";
 import Logo from "@/app/ui/Logo";
@@ -15,6 +16,7 @@ const navItems = [
 
 function Navbar() {
   const pathname = usePathname();
+  const lenis = useLenis();
   return (
     <motion.nav
       initial={{ opacity: 0, y: -50 }}
@@ -43,10 +45,19 @@ function Navbar() {
                   key={layoutId}
                   className="absolute inset-x-0 -bottom-2 mx-auto h-1 w-1 rounded-full bg-gradient-to-br
                     from-gray-300 to-gray-500"
-                  transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
+                  transition={{
+                    type: "spring",
+                    bounce: 0.2,
+                    duration: 0.6,
+                    stiffness: 600,
+                    damping: 60,
+                  }}
                 />
               )}
-              <Link href={item.link} replace={true} scroll={true}>
+              <Link
+                href={item.link}
+                onClick={() => lenis?.scrollTo("#scroll-top-anchor")}
+              >
                 {item.name}
               </Link>
             </motion.li>
