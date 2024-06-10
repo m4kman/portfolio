@@ -40,21 +40,22 @@ function ProjectCard({
       className="sticky top-0 flex h-[80vh] items-center justify-center"
     >
       <motion.div
-        className={`relative h-[475px] w-[900px] rounded border-2 border-muted/5 bg-gradient-to-b
-          from-[#1c1c22] to-[rgb(24,24,27)] p-12 shadow-sm shadow-muted/5`}
+        className={`relative min-h-fit w-[900px] rounded border-2 border-muted/5 bg-gradient-to-b
+          from-[#1c1c22] to-[rgb(24,24,27)] px-12 py-14 shadow-sm shadow-muted/5
+          md:min-h-[500px] lg:min-h-[475px]`}
         style={{
           top: `calc(${idx}*50px)`,
           scale: cardScale,
         }}
       >
         <h1 className="mb-10 text-center text-3xl font-semibold">{title}</h1>
-        <div className="grid grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
           <ProjectDescription
             description={description}
             stack={stack}
             links={links}
           />
-          <div className="overflow-hidden rounded">
+          <div className="order-first h-60 w-full overflow-hidden rounded md:order-last md:h-full">
             <motion.div
               style={{ scale: imgScale }}
               className="relative h-full w-full"

@@ -13,7 +13,7 @@ function Projects() {
   });
 
   return (
-    <div ref={projectsContainer}>
+    <div ref={projectsContainer} className="px-10 lg:px-0">
       <div className="mx-auto mb-28 flex max-w-fit flex-col gap-1">
         <h1 className="text-center text-5xl font-semibold uppercase">
           Projects

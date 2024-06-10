@@ -26,12 +26,12 @@ function Navbar() {
       id="home"
     >
       <ol
-        className="fixed flex items-center justify-center gap-6 rounded-full bg-muted/10 px-9
-          py-[15px] backdrop-blur-md"
+        className="fixed flex items-center justify-center gap-6 rounded-full bg-muted/10 px-7
+          py-[15px] backdrop-blur-md xl:px-9"
       >
         <li className="mr-4 flex items-center justify-center">
-          <Link href="/" className="fill-foreground">
-            <Logo width={36} height={36} />
+          <Link href="/" className="h-9 w-9 fill-foreground xl:h-9 xl:w-9">
+            <Logo width="full" height="full" />
           </Link>
         </li>
         {navItems.map((item, index) => {
@@ -76,7 +76,7 @@ function Navbar() {
           </Link>
         </li>
         <li className="cursor-pointer fill-foreground hover:fill-foreground/85">
-          <Link href="https://x.com/m4kman" target="_blank" className="">
+          <Link href="https://x.com/m4kman" target="_blank">
             <X width={24} height={24} />
           </Link>
         </li>

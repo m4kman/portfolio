@@ -20,11 +20,11 @@ function Footer() {
 
   return (
     <div className="relative mt-48 overflow-hidden">
-      <div className="-mb-3 flex justify-center">
+      <div className="-mb-3 flex justify-center px-10">
         <FooterSVG />
       </div>
       <div className="border-t border-muted/20">
-        <div className="flex justify-between px-36 py-24">
+        <div className="flex justify-between gap-20 ~px-20/36 ~py-20/24">
           <div className="flex flex-col gap-4">
             <Image src="/assets/Logo.svg" alt="Logo" width={42} height={42} />
             <span className="text-sm font-thin text-foreground/80">
@@ -36,7 +36,7 @@ function Footer() {
               Designed and developed by{" "}
               <span className="font-medium">m4kman</span>
             </span>
-            <div className="flex gap-4 fill-foreground">
+            <div className="flex justify-start gap-4 fill-foreground">
               <Link
                 href="https://github.com/m4kman"
                 className="hover:fill-foreground/80"

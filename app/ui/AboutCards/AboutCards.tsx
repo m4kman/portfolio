@@ -69,8 +69,13 @@ function AboutCards({ isStacked }: { isStacked: boolean }) {
         }}
       >
         <motion.div
-          className="relative grid h-[500px] w-[340px] place-items-center rounded
-            text-card-foreground shadow-lg shadow-black/25"
+          className={
+            isStacked
+              ? `relative grid h-[500px] w-[340px] place-items-center rounded
+                text-card-foreground shadow-lg shadow-black/25`
+              : `relative grid place-items-center rounded text-card-foreground shadow-lg
+                shadow-black/25 xl:h-[450px] xl:w-[270px] 2xl:h-[500px] 2xl:w-[340px]`
+          }
           animate={{
             transform: `rotate(${rotateX}deg) translateX(${translateX}) translateY(${translateY})`,
           }}

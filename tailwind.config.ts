@@ -1,23 +1,28 @@
 import type { Config } from "tailwindcss";
 import { PluginAPI } from "tailwindcss/types/config";
+import fluid, { extract, screens, fontSize } from "fluid-tailwind";
 
 const config: Config = {
   darkMode: ["class"],
-  content: [
-    "./pages/**/*.{ts,tsx,md,mdx}",
-    "./components/**/*.{ts,tsx,md,mdx}",
-    "./app/**/*.{ts,tsx,md,mdx}",
-    "./content/**/*.{ts,tsx,md,mdx}",
-  ],
+  content: {
+    files: [
+      "./pages/**/*.{ts,tsx,md,mdx}",
+      "./components/**/*.{ts,tsx,md,mdx}",
+      "./app/**/*.{ts,tsx,md,mdx}",
+      "./content/**/*.{ts,tsx,md,mdx}",
+    ],
+    extract,
+  },
   prefix: "",
   theme: {
     container: {
       center: true,
       padding: "2rem",
       screens: {
-        "2xl": "1400px",
+        "2xl": "87.5rem",
       },
     },
+    screens,
     extend: {
       fontFamily: {
         main: ["var(--font-mona-sans)"],
@@ -163,7 +168,11 @@ const config: Config = {
       },
     },
   },
-  plugins: [require("tailwindcss-animate"), require("@tailwindcss/typography")],
+  plugins: [
+    require("tailwindcss-animate"),
+    require("@tailwindcss/typography"),
+    fluid,
+  ],
 };
 
 export default config;

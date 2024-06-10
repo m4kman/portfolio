@@ -22,8 +22,11 @@ async function Home({ params }: { params: { slug: string } }) {
   const blogPost = await getPost(params.slug);
   return (
     <PageWrapper>
-      <div className="mx-auto mt-[130px] flex max-w-2xl flex-col items-center justify-center">
-        <div className="flex flex-col items-center justify-center">
+      <div
+        className="mx-auto mt-[130px] flex max-w-2xl flex-col items-center justify-center px-16
+          md:px-0"
+      >
+        <div className="flex flex-col items-start justify-center">
           <BlogHero
             title={blogPost.frontmatter.title}
             date={blogPost.frontmatter.publishedAt}

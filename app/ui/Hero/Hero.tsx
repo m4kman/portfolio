@@ -7,7 +7,7 @@ import avatar from "./pf4.webp";
 
 function Hero() {
   return (
-    <div className="flex flex-col place-items-center gap-9 pb-5">
+    <div className="flex flex-col place-items-center gap-9 px-10 pb-5 lg:px-0">
       <Badge className="text-[14px]">
         <span className="relative inline-flex h-[8px] w-[8px] rounded-full bg-foreground">
           <span className="absolute inline-flex h-[8px] w-[8px] animate-ping rounded-full bg-foreground"></span>
@@ -21,7 +21,7 @@ function Hero() {
           className="h-full w-full object-cover"
         />
       </div>
-      <h2 className="max-w-[815px] text-center text-5xl font-normal leading-snug">
+      <h2 className="max-w-[33ch] text-center font-normal leading-snug ~text-4xl/5xl md:max-w-[30ch]">
         <span
           className="bg-gradient-to-r from-[#3F64E9] via-[#E93F3F] to-[#FFB800] bg-clip-text
             font-semibold text-transparent"
@@ -35,14 +35,14 @@ function Hero() {
       </p>
       <div className="flex gap-8">
         <Button
-          className="button-hover rounded bg-black px-12 py-[18px] text-[20px] font-normal uppercase
-            text-primary-foreground hover:text-foreground"
+          className="button-hover rounded bg-black font-normal uppercase text-primary-foreground
+            ~text-base/xl ~px-8/12 ~py-[0.875rem]/[1.125rem] hover:text-foreground"
         >
           <span className="relative">Get in Touch</span>
         </Button>
         <Button
-          className="button-hover rounded bg-black px-12 py-[18px] text-[20px] font-normal uppercase
-            text-primary-foreground hover:text-foreground"
+          className="button-hover rounded bg-black font-normal uppercase text-primary-foreground
+            ~text-base/xl ~px-8/12 ~py-[0.875rem]/[1.125rem] hover:text-foreground"
         >
           <span className="relative">View Resume</span>
         </Button>

@@ -19,8 +19,8 @@ function ProjectDescription({
   };
 
   return (
-    <div className="mt-6 flex flex-col gap-5 text-foreground/90">
-      <p className="max-w-[40ch] text-balance text-lg font-normal">
+    <div className="mt-6 flex flex-col gap-6 text-foreground/90">
+      <p className="text-balance text-lg font-normal md:max-w-[40ch]">
         {description}
       </p>
 
@@ -32,7 +32,9 @@ function ProjectDescription({
               href={link.url}
               target="_blank"
             >
-              <span className="text-base font-medium">{link.name}</span>
+              <span className="text-base font-medium md:text-base">
+                {link.name}
+              </span>
               <motion.div variants={arrowMotion}>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"

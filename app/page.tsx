@@ -16,6 +16,7 @@ export default function Home() {
           <Hero />
           <Marquee>Projects</Marquee>
           <Projects />
+          <div className="" />
           <Marquee>Blog</Marquee>
           <Blog />
           <Marquee>About</Marquee>

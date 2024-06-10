@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <PageWrapper y={50}>
-      <div className="-mt-52">
+      <div className="-mt-10">
         <Contact />
       </div>
     </PageWrapper>

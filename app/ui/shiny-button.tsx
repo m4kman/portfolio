@@ -26,10 +26,10 @@ const ShinyButton = ({ children }: { children: React.ReactNode }) => {
   return (
     <motion.button
       {...animationProps}
-      className="relative z-[99] rounded px-6 py-[14px] font-normal backdrop-blur-xl
+      className="relative z-[99] rounded px-5 py-[14px] font-normal backdrop-blur-xl
         backdrop-filter transition-[box-shadow] duration-300 ease-in-out hover:shadow
         dark:bg-[radial-gradient(circle_at_50%_0%,hsl(var(--primary))_0%,hsl(var(--primary))_60%)]
-        dark:hover:shadow-[0_0_20px_hsl(var(--primary)/60%)]"
+        dark:hover:shadow-[0_0_20px_hsl(var(--primary)/60%)] lg:px-6"
     >
       <span
         className="relative block h-full w-full text-sm font-normal uppercase tracking-wide

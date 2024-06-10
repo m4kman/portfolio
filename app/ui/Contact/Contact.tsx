@@ -35,7 +35,7 @@ function Contact() {
   }
 
   return (
-    <div className="mt-52 flex flex-col items-center justify-center">
+    <div className="flex flex-col items-center justify-center">
       <LampContainer className="">
         <motion.h1
           initial={{ opacity: 0.5, y: 100 }}
@@ -46,30 +46,29 @@ function Contact() {
             ease: "easeInOut",
           }}
           className="mt-8 bg-gradient-to-br from-foreground to-gray-500 bg-clip-text py-4 text-center
-            text-4xl font-medium tracking-tight text-transparent md:text-7xl"
+            font-medium tracking-tight text-transparent ~text-5xl/8xl"
         >
           Let&apos;s build
           <br /> something together
         </motion.h1>
       </LampContainer>
-
       <div
-        className="group relative flex w-[850px] -translate-y-36 flex-col items-center
-          justify-center gap-4 overflow-hidden rounded border border-muted/10
-          bg-gradient-to-b from-[#1c1c1c]/50 to-[#18181B]/50 p-16 shadow-md shadow-muted/5
-          backdrop-blur-3xl"
+        className="group flex -translate-y-36 flex-col items-center justify-center gap-4
+          overflow-hidden rounded border border-muted/10 bg-gradient-to-b
+          from-[#1c1c1c]/50 to-[#18181B]/50 px-10 py-16 shadow-md shadow-muted/5
+          backdrop-blur-3xl ~w-[28.375rem]/[53.125rem]"
         onMouseMove={handleMouseMove}
       >
         <div className="z-50 flex flex-col items-center justify-center gap-4">
           <h1 className="text-5xl font-semibold">Reach Out</h1>
-          <p className="text-lg font-normal text-foreground/80">
+          <p className="font-normal text-foreground/80 ~text-sm/lg">
             Drop me an email or a message, and I&apos;ll get back to you
             promptly.
           </p>
           <div className="mt-8 flex items-center justify-center gap-8">
             <motion.div
               whileHover={{
-                scale: 1.02,
+                scale: 1.05,
               }}
             >
               <Link
@@ -93,7 +92,7 @@ function Contact() {
                   >
                     <motion.div
                       whileHover={{
-                        scale: 1.02,
+                        scale: 1.05,
                       }}
                       className="flex cursor-pointer flex-col items-center justify-center gap-4
                         hover:text-foreground/90"
@@ -114,7 +113,7 @@ function Contact() {
             </div>
             <motion.div
               whileHover={{
-                scale: 1.02,
+                scale: 1.05,
               }}
             >
               <Link
