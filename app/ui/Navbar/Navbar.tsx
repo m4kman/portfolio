@@ -22,21 +22,23 @@ function Navbar() {
       initial={{ opacity: 0, y: -50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.7 }}
-      className="relative z-50 flex items-center justify-center pt-[72px]"
+      className="relative z-[99] flex items-center justify-center pt-[72px]"
       id="home"
     >
-      <Link href="/" className="absolute left-0 mx-40">
-        <Logo width={40} height={40} />
-      </Link>
       <ol
         className="fixed flex items-center justify-center gap-6 rounded-full bg-muted/10 px-9
           py-[15px] backdrop-blur-md"
       >
+        <li className="mr-4 flex items-center justify-center">
+          <Link href="/" className="fill-foreground">
+            <Logo width={36} height={36} />
+          </Link>
+        </li>
         {navItems.map((item, index) => {
           const layoutId = `${item.name}-${index}`;
           return (
             <motion.li
-              className="relative cursor-pointer text-sm font-medium hover:text-foreground/85"
+              className="relative cursor-pointer text-sm font-semibold hover:text-foreground/85"
               key={index}
             >
               {pathname === item.link && (
@@ -64,7 +66,7 @@ function Navbar() {
           );
         })}
         <div
-          className="h-6 w-[0.5px] shrink-0 bg-gradient-to-b from-muted/20 from-0% via-muted/80
+          className="h-7 w-px shrink-0 bg-gradient-to-b from-muted/20 from-0% via-muted/80
             to-muted/20 to-100%"
         />
 

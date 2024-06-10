@@ -4,7 +4,7 @@ function Logo(props: React.SVGProps<SVGSVGElement>) {
       width="76"
       height="76"
       viewBox="0 0 76 76"
-      fill="white"
+      fill="inherit"
       xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
