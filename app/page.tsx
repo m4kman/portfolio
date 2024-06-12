@@ -12,17 +12,14 @@ export default function Home() {
     <>
       <ResumeCTA />
       <PageWrapper y={40}>
-        <div className="mt-[130px]">
-          <Hero />
-          <Marquee>Projects</Marquee>
-          <Projects />
-          <div className="" />
-          <Marquee>Blog</Marquee>
-          <Blog />
-          <Marquee>About</Marquee>
-          <About />
-          <Contact />
-        </div>
+        <Hero />
+        <Marquee>Projects</Marquee>
+        <Projects />
+        <Marquee>Blog</Marquee>
+        <Blog />
+        <Marquee>About</Marquee>
+        <About />
+        <Contact />
       </PageWrapper>
     </>
   );

@@ -7,7 +7,10 @@ import avatar from "./pf4.webp";
 
 function Hero() {
   return (
-    <div className="flex flex-col place-items-center gap-9 px-10 pb-5 lg:px-0">
+    <div
+      className="mt-24 flex flex-col place-items-center items-center justify-center gap-9 px-10
+        pb-5 lg:px-0 2xl:mt-32"
+    >
       <Badge className="text-[14px]">
         <span className="relative inline-flex h-[8px] w-[8px] rounded-full bg-foreground">
           <span className="absolute inline-flex h-[8px] w-[8px] animate-ping rounded-full bg-foreground"></span>

@@ -37,7 +37,7 @@ function ProjectCard({
   return (
     <div
       ref={cardContainer}
-      className="sticky top-0 flex h-[80vh] items-center justify-center"
+      className="sticky top-0 flex h-screen items-center justify-center"
     >
       <motion.div
         className={`relative min-h-fit w-[900px] rounded border-2 border-muted/5 bg-gradient-to-b

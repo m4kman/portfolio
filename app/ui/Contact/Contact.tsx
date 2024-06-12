@@ -46,7 +46,7 @@ function Contact() {
             ease: "easeInOut",
           }}
           className="mt-8 bg-gradient-to-br from-foreground to-gray-500 bg-clip-text py-4 text-center
-            font-medium tracking-tight text-transparent ~text-5xl/8xl"
+            text-4xl font-medium tracking-tight text-transparent md:text-7xl"
         >
           Let&apos;s build
           <br /> something together
@@ -76,7 +76,11 @@ function Contact() {
                 className="flex flex-col items-center justify-center gap-4 fill-foreground
                   hover:fill-foreground/80 hover:text-foreground/90"
               >
-                <WhatsApp width="2em" height="2em" className="fill-inherit" />
+                <WhatsApp
+                  width="2.5em"
+                  height="2.5em"
+                  className="fill-inherit"
+                />
                 <span className="text-sm font-medium">WhatsApp</span>
               </Link>
             </motion.div>
@@ -97,7 +101,7 @@ function Contact() {
                       className="flex cursor-pointer flex-col items-center justify-center gap-4
                         hover:text-foreground/90"
                     >
-                      <Mail size={32} />
+                      <Mail size={40} />
                       <span className="mt-0.5 text-sm font-medium">Email</span>
                     </motion.div>
                   </TooltipTrigger>
@@ -122,7 +126,7 @@ function Contact() {
                 className="flex flex-col items-center justify-center gap-4 fill-foreground
                   hover:fill-foreground/80 hover:text-foreground/90"
               >
-                <X width="2em" height="2em" />
+                <X width="2.5em" height="2.5em" />
                 <span className="mt-0.5 text-sm font-medium">X (Twitter)</span>
               </Link>
             </motion.div>

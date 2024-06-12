@@ -22,12 +22,12 @@ function Navbar() {
       initial={{ opacity: 0, y: -50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.7 }}
-      className="relative z-[99] flex items-center justify-center pt-[72px]"
+      className="z-50 flex items-center justify-center pt-[72px]"
       id="home"
     >
       <ol
-        className="fixed flex items-center justify-center gap-6 rounded-full bg-muted/10 px-7
-          py-[15px] backdrop-blur-md xl:px-9"
+        className="fixed z-[999999999999999999999] flex items-center justify-center gap-6
+          rounded-full bg-muted/10 px-7 py-[15px] backdrop-blur-md xl:px-9"
       >
         <li className="mr-4 flex items-center justify-center">
           <Link href="/" className="h-9 w-9 fill-foreground xl:h-9 xl:w-9">
