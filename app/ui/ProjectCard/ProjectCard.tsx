@@ -61,6 +61,7 @@ function ProjectCard({
               className="relative h-full w-full"
             >
               <Image
+                placeholder="blur"
                 src={backdrop}
                 fill
                 alt="Project Image"

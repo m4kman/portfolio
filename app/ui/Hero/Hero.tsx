@@ -19,6 +19,8 @@ function Hero() {
       </Badge>
       <div className="z-50 max-h-[150px] max-w-[150px]">
         <Image
+          priority={true}
+          placeholder="blur"
           src={avatar}
           alt="Profile Picture"
           className="h-full w-full object-cover"
