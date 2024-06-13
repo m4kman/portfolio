@@ -34,10 +34,10 @@ const PROJECTS = [
     description:
       "Restore your old, blurry images with Repik, a web app that uses AI to enhance image quality. Relive your memories in high definition.",
     links: [
-      { name: "GitHub", url: "" },
-      { name: "Live Demo", url: "" },
+      // { name: "GitHub", url: "" },
+      // { name: "Live Demo", url: "" },
     ],
-    backdrop: "",
+    backdrop: "/assets/repik.png",
     stack: ["Next.js", "Tailwind", "Replicate", "Framer Motion"],
   },
 ];
