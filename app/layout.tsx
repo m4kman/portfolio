@@ -6,6 +6,7 @@ import { ReactLenis } from "@/app/lib/lenis";
 import Navbar from "@/app/ui/Navbar";
 import Footer from "@/app/ui/Footer";
 import Gradients from "@/app/ui/Gradients";
+import CV from "@/app/ui/cv";
 
 import "./globals.css";
 
@@ -45,6 +46,7 @@ export default function RootLayout({
       no-scrollbar dark min-h-[100vh] font-main`}
     >
       <body className="relative min-h-screen overflow-x-hidden">
+        <CV />
         <div className="absolute -top-96 h-1 w-1" id="scroll-top-anchor"></div>
         <Gradients position="-top-64" />
         <Navbar />

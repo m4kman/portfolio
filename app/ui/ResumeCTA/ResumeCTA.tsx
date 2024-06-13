@@ -14,9 +14,9 @@ function ResumeCTA() {
         exit={{ y: -50, opacity: 0 }}
         className="absolute right-0 -mt-6 hidden md:mx-5 lg:mx-10 lg:block xl:mx-20 2xl:mx-40"
       >
-        <ShinyButton>
-          <Link href="#">Press B for Resume</Link>
-        </ShinyButton>
+        <Link href="/resume.pdf">
+          <ShinyButton>Press B for Resume</ShinyButton>
+        </Link>
       </motion.div>
     </AnimatePresence>
   );
