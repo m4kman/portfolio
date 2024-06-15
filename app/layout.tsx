@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import { Chakra_Petch } from "next/font/google";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 import { ReactLenis } from "@/app/lib/lenis";
 import Navbar from "@/app/ui/Navbar";
