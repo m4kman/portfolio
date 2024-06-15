@@ -23,8 +23,8 @@ async function Home({ params }: { params: { slug: string } }) {
   return (
     <PageWrapper>
       <div
-        className="mx-auto mt-[130px] flex max-w-2xl flex-col items-center justify-center px-16
-          md:px-0"
+        className="mx-auto mb-20 mt-[130px] flex max-w-2xl flex-col items-center justify-center
+          px-16 md:px-0"
       >
         <div className="flex flex-col items-start justify-center">
           <BlogHero

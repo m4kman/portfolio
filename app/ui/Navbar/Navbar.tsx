@@ -27,10 +27,10 @@ function Navbar() {
     >
       <ol
         className="fixed z-[99999999999] flex items-center justify-center gap-6 rounded-full
-          bg-muted/10 px-7 py-[15px] backdrop-blur-3xl xl:px-9"
+          bg-muted/10 px-5 py-[15px] backdrop-blur-3xl sm:px-7 xl:px-9"
       >
         <li className="mr-4 flex items-center justify-center">
-          <Link href="/" className="h-9 w-9 fill-foreground xl:h-9 xl:w-9">
+          <Link href="/" className="h-7 w-7 fill-foreground sm:h-9 sm:w-9">
             <Logo width="full" height="full" />
           </Link>
         </li>

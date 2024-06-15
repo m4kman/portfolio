@@ -19,12 +19,12 @@ function Footer() {
     useCopyToClipboard();
 
   return (
-    <div className="relative mt-48 overflow-hidden">
-      <div className="-mb-3 flex justify-center px-10">
+    <div className="relative mx-auto -mt-20 w-full overflow-hidden lg:mt-10">
+      <div className="-mb-[56px] flex w-full justify-center px-4 sm:-mb-12 md:-mb-6 lg:-mb-3">
         <FooterSVG />
       </div>
       <div className="border-t border-muted/20">
-        <div className="flex justify-between gap-20 ~px-20/36 ~py-20/24">
+        <div className="flex justify-between gap-20 ~px-12/36 ~py-20/24">
           <div className="flex flex-col gap-4">
             <Image src="/assets/Logo.svg" alt="Logo" width={42} height={42} />
             <span className="text-sm font-thin text-foreground/80">

@@ -10,7 +10,10 @@ export const metadata: Metadata = {
 function Home() {
   return (
     <PageWrapper>
-      <div className="mx-auto mt-[130px] flex max-w-2xl flex-col items-center justify-center">
+      <div
+        className="mx-auto mb-20 mt-[130px] flex max-w-2xl flex-col items-center justify-center
+          px-10"
+      >
         <div className="flex flex-col gap-10">
           <div className="flex flex-col gap-2">
             <h1 className="text-4xl font-semibold">Read my blogs</h1>

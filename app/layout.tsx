@@ -45,13 +45,15 @@ export default function RootLayout({
       className={`${monaSans.variable} ${chakraPetch.variable} ${dancingScript.variable}
       no-scrollbar dark min-h-[100vh] font-main`}
     >
-      <body className="relative min-h-screen overflow-x-hidden">
+      <body className="relative flex min-h-screen flex-col overflow-x-hidden">
         <CV />
         <div className="absolute -top-96 h-1 w-1" id="scroll-top-anchor"></div>
         <Gradients position="-top-64" />
         <Navbar />
         <ReactLenis root>{children}</ReactLenis>
-        <Footer />
+        <div className="mt-auto">
+          <Footer />
+        </div>
         <div className="pointer-events-none absolute inset-0 bg-noise opacity-[.021]"></div>
       </body>
     </html>

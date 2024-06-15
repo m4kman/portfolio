@@ -36,7 +36,7 @@ function Hero() {
         software engineer and aspiring security enthusiast
       </h2>
       <p className="text-[20px] text-foreground/80">
-        I like writing code and writing about it.
+        I like coding and writing about it.
       </p>
       <div className="flex gap-8">
         <Button
