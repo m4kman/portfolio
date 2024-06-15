@@ -56,6 +56,7 @@ export default function RootLayout({
           <Footer />
         </div>
         <div className="pointer-events-none absolute inset-0 bg-noise opacity-[.021]"></div>
+        <SpeedInsights />
       </body>
     </html>
   );
