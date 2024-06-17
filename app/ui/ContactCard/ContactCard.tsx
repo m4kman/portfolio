@@ -54,7 +54,8 @@ function ContactCard() {
               }}
             >
               <Link
-                href=""
+                href="https://wa.me/923352190046"
+                target="_blank"
                 className="flex flex-col items-center justify-center gap-4 fill-foreground
                   hover:fill-foreground/80 hover:text-foreground/90"
               >
@@ -73,7 +74,7 @@ function ContactCard() {
                     onMouseLeave={() => setClipboardText("Click to Copy")}
                     onClick={(e) => {
                       e.preventDefault();
-                      handleClipboardCopy("ihassam187@gmail.com");
+                      handleClipboardCopy("hassam@m4kman.dev");
                     }}
                   >
                     <motion.div

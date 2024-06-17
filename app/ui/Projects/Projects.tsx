@@ -14,7 +14,7 @@ function Projects() {
 
   return (
     <div ref={projectsContainer} className="px-10 lg:px-0">
-      <div className="mx-auto flex max-w-fit flex-col gap-1 md:-mb-20">
+      <div className="mx-auto flex max-w-fit flex-col gap-1 2xl:-mb-24">
         <h1 className="text-center text-5xl font-semibold uppercase">
           Projects
         </h1>

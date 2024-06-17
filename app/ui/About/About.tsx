@@ -19,7 +19,7 @@ function About() {
       initial={{ opacity: 0, y: 60 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.7 }}
-      className="mb-20 px-10"
+      className="mb-52 px-10"
     >
       <div className="mx-auto mb-28 flex max-w-fit flex-col gap-1">
         <h1 className="text-center text-5xl font-semibold uppercase">About</h1>

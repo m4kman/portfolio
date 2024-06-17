@@ -16,7 +16,7 @@ function Contact() {
             duration: 0.8,
             ease: "easeInOut",
           }}
-          className="mb-11 text-center font-medium ~text-6xl/8xl md:pt-0"
+          className="text-center font-medium ~text-6xl/8xl"
         >
           <span className="bg-gradient-to-br from-foreground to-gray-500 bg-clip-text text-transparent">
             Let&apos;s build
@@ -24,7 +24,8 @@ function Contact() {
           </span>
         </motion.h1>
       </LampContainer>
-      <div className="w-[90%] -translate-y-56 md:w-fit">
+
+      <div className="w-[90%] -translate-y-28 md:w-fit 2xl:-translate-y-56">
         <ContactCard />
       </div>
     </div>

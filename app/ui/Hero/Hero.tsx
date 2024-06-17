@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 import Badge from "@/app/ui/Badge";
 
@@ -8,8 +9,8 @@ import avatar from "./pf4.webp";
 function Hero() {
   return (
     <div
-      className="mt-24 flex flex-col place-items-center items-center justify-center gap-9 px-10
-        pb-5 lg:px-0 2xl:mt-32"
+      className="mt-20 flex max-h-full flex-col place-items-center items-center justify-center
+        gap-6 px-10 pb-5 lg:px-0 2xl:mt-32 2xl:gap-9"
     >
       <Badge className="text-[14px]">
         <span className="relative inline-flex h-[8px] w-[8px] rounded-full bg-foreground">
@@ -17,7 +18,7 @@ function Hero() {
         </span>
         Available for work
       </Badge>
-      <div className="z-50 max-h-[150px] max-w-[150px]">
+      <div className="z-50 max-h-32 max-w-32 2xl:max-h-[150px] 2xl:max-w-[150px]">
         <Image
           priority={true}
           placeholder="blur"
@@ -26,7 +27,7 @@ function Hero() {
           className="h-full w-full object-cover"
         />
       </div>
-      <h2 className="max-w-[33ch] text-center font-normal leading-snug ~text-4xl/5xl md:max-w-[30ch]">
+      <h2 className="max-w-[33ch] text-center font-normal leading-snug ~text-3xl/5xl md:max-w-[30ch]">
         <span
           className="bg-gradient-to-r from-[#3F64E9] via-[#E93F3F] to-[#FFB800] bg-clip-text
             font-semibold text-transparent"
@@ -41,15 +42,19 @@ function Hero() {
       <div className="flex gap-8">
         <Button
           className="button-hover rounded bg-black font-normal uppercase text-primary-foreground
-            ~text-base/xl ~px-8/12 ~py-[0.875rem]/[1.125rem] hover:text-foreground"
+            ~text-base/lg ~px-7/12 ~py-[0.75rem]/[1.125rem] hover:text-foreground"
         >
-          <span className="relative">Get in Touch</span>
+          <Link href="/contact" className="relative">
+            Get in Touch
+          </Link>
         </Button>
         <Button
           className="button-hover rounded bg-black font-normal uppercase text-primary-foreground
-            ~text-base/xl ~px-8/12 ~py-[0.875rem]/[1.125rem] hover:text-foreground"
+            ~text-base/lg ~px-8/12 ~py-[0.875rem]/[1.125rem] hover:text-foreground"
         >
-          <span className="relative">View Resume</span>
+          <Link href="/resume.pdf" className="relative">
+            View Resume
+          </Link>
         </Button>
       </div>
     </div>
