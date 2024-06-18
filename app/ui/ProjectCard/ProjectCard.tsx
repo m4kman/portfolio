@@ -60,12 +60,18 @@ function ProjectCard({
               style={{ scale: imgScale }}
               className="relative h-full w-full"
             >
-              <Image
-                src={backdrop}
-                fill
-                alt="Project Image"
-                className="h-full w-full object-cover"
-              />
+              {backdrop.includes(".webm") ? (
+                <video autoPlay loop playsInline>
+                  <source src={backdrop} type="video/webm" />
+                </video>
+              ) : (
+                <Image
+                  src={backdrop}
+                  fill
+                  alt="Project Image"
+                  className="h-full w-full object-cover"
+                />
+              )}
             </motion.div>
           </div>
         </div>

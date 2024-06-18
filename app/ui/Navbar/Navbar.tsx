@@ -21,7 +21,7 @@ function Navbar() {
     <motion.nav
       initial={{ opacity: 0, y: -50 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.7 }}
+      transition={{ duration: 0.7, easings: "easeInOut" }}
       className="relative z-[999] flex items-center justify-center pt-[72px]"
       id="home"
     >

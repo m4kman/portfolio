@@ -26,7 +26,7 @@ const PROJECTS = [
       { name: "GitHub", url: "https://github.com/m4kman/jor-project-mdx" },
       { name: "Live Demo", url: "https://jor-project-mdx.vercel.app" },
     ],
-    backdrop: "/assets/mdx-project-backdrop.gif",
+    backdrop: "/assets/mdx-project-backdrop.webm",
     stack: ["Next.js", "CSS Modules", "Framer Motion", "Next MDX"],
   },
   {
