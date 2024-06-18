@@ -50,18 +50,18 @@ const ABOUT = [
   },
   {
     id: crypto.randomUUID(),
-    description: "I am a Computer Systems Engineering Major",
+    description: "I have majored in Computer Systems Engineering",
     number: 2,
   },
   {
     id: crypto.randomUUID(),
-    description: "23 years old, passionate about coding as it gives me joy",
+    description: "23 years old, passionate about coding as it brings me joy",
     number: 3,
   },
   {
     id: crypto.randomUUID(),
     description:
-      "I don’t limit myself to one framework or library, rather I enjoy playing around with various",
+      "I don’t limit myself to one framework or library, rather I enjoy playing around with various technologies",
     number: 4,
   },
   {
