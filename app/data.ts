@@ -15,7 +15,7 @@ const PROJECTS = [
     description:
       "My first portfolio, powered by Next.js and Tailwind CSS, with a touch of Framer Motion for animations.",
     links: [{ name: "GitHub", url: "https://github.com/m4kman/portfolio" }],
-    backdrop: "/assets/portfolio-backdrop.webp",
+    backdrop: "/assets/portfolio.webp",
     stack: ["Next.js", "Tailwind", "Framer Motion", "Figma"],
   },
   {
@@ -37,7 +37,7 @@ const PROJECTS = [
       // { name: "GitHub", url: "" },
       // { name: "Live Demo", url: "" },
     ],
-    backdrop: "/assets/repik.png",
+    backdrop: "/assets/repik.webp",
     stack: ["Next.js", "Tailwind", "Replicate", "Framer Motion"],
   },
 ];
