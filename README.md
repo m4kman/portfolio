@@ -1,5 +1,14 @@
-## Reworking current portfolio - IN PROGRESS.
+# m4kman.dev (v1)
 
-# Portfolio (v1)
+My first personal website and blog, from design to code.
 
-My first professional portfolio. This is a work in progress, soon to finish. Finalizing a few other things to complete the portfolio.
+### Tech Stack
+
+- Next.js
+- Tailwind CSS
+- Framer Motion
+- Next MDX-Remote
+- Vercel (hosting)
+
+The design is bound to change overtime, and all of my blog posts will be
+published here. This marks a _new beginning_.
