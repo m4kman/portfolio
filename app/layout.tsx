@@ -12,6 +12,7 @@ import CV from "@/app/ui/cv";
 import "./globals.css";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://m4kman.dev"),
   title: "Hassam 'm4kman' Khan",
   description: "m4kman's Portfolio",
 };

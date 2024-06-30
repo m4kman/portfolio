@@ -27,7 +27,10 @@ function Hero() {
           className="h-full w-full object-cover"
         />
       </div>
-      <h2 className="max-w-[33ch] text-center font-normal leading-snug ~text-3xl/5xl md:max-w-[30ch]">
+      <h2
+        className="max-w-[20.625rem] text-center font-normal leading-snug ~text-3xl/5xl
+          md:max-w-[30ch]"
+      >
         <span
           className="bg-gradient-to-r from-foreground via-accent to-accent bg-clip-text font-semibold
             text-transparent"
