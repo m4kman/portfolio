@@ -43,22 +43,22 @@ function Hero() {
         I like coding and writing about it.
       </p>
       <div className="flex gap-8">
-        <Button
-          className="button-hover rounded bg-black font-normal uppercase text-primary-foreground
-            ~text-base/lg ~px-7/12 ~py-[0.75rem]/[1.125rem] hover:text-foreground"
-        >
-          <Link href="/contact" className="relative">
-            Get in Touch
-          </Link>
-        </Button>
-        <Button
-          className="button-hover rounded bg-black font-normal uppercase text-primary-foreground
-            ~text-base/lg ~px-8/12 ~py-[0.875rem]/[1.125rem] hover:text-foreground"
-        >
-          <Link href="/resume.pdf" className="relative">
-            View Resume
-          </Link>
-        </Button>
+        <Link href="/contact">
+          <Button
+            className="button-hover rounded bg-black font-normal uppercase text-primary-foreground
+              ~text-base/lg ~px-7/12 ~py-[0.75rem]/[1.125rem] hover:text-foreground"
+          >
+            <span className="relative">Get in Touch</span>
+          </Button>
+        </Link>
+        <Link href="/resume.pdf">
+          <Button
+            className="button-hover rounded bg-black font-normal uppercase text-primary-foreground
+              ~text-base/lg ~px-8/12 ~py-[0.875rem]/[1.125rem] hover:text-foreground"
+          >
+            <span className="relative">View Resume</span>
+          </Button>
+        </Link>
       </div>
     </div>
   );
