@@ -1,5 +1,16 @@
 const PROJECTS = [
   {
+    title: "Repik",
+    description:
+      "Restore your old, blurry images with Repik, a web app that uses AI to enhance image quality. Relive your memories in high definition.",
+    links: [
+      { name: "GitHub", url: "https://github.com/m4kman/repik" },
+      { name: "Live Demo", url: "https://repik.vercel.app" },
+    ],
+    backdrop: "/assets/repik.webp",
+    stack: ["Next.js", "Cloudinary", "Replicate", "Tailwind", "Framer Motion"],
+  },
+  {
     title: "Movieable",
     description:
       "A movie search engine granting access to a vast database of movies across multiple genres, complete with detailed information for each film to help you choose your next watch.",
@@ -28,17 +39,6 @@ const PROJECTS = [
     ],
     backdrop: "/assets/mdx-project-backdrop.webm",
     stack: ["Next.js", "CSS Modules", "Framer Motion", "Next MDX"],
-  },
-  {
-    title: "Repik (ongoing)",
-    description:
-      "Restore your old, blurry images with Repik, a web app that uses AI to enhance image quality. Relive your memories in high definition.",
-    links: [
-      // { name: "GitHub", url: "" },
-      // { name: "Live Demo", url: "" },
-    ],
-    backdrop: "/assets/repik.webp",
-    stack: ["Next.js", "Tailwind", "Replicate", "Framer Motion"],
   },
 ];
 
