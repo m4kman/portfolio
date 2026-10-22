@@ -22,31 +22,33 @@ const getNodeText = (node: ReactNode): string => {
 export const mdxComponents = {
   h2: ({ children, ...props }: ComponentPropsWithoutRef<"h2">) => (
     <h2
-      className="mt-10 mb-4 scroll-mt-24 font-bold font-serif text-2xl text-white"
+      className="mt-10 mb-4 scroll-mt-24 font-serif text-2xl font-bold text-white"
       id={slugify(getNodeText(children))}
       {...props}
     >
       {children}
     </h2>
   ),
-  h3: (props: ComponentPropsWithoutRef<"h3">) => (
+  h3: ({ children, ...props }: ComponentPropsWithoutRef<"h3">) => (
     <h3
-      className="mt-8 mb-3 font-bold font-serif text-white text-xl"
+      className="mt-8 mb-3 font-serif text-xl font-bold text-white"
       {...props}
-    />
+    >
+      {children}
+    </h3>
   ),
   p: (props: ComponentPropsWithoutRef<"p">) => (
-    <p className="mb-5 text-foreground/80 leading-[1.7]" {...props} />
+    <p className="text-foreground/80 mb-5 leading-[1.7]" {...props} />
   ),
   ul: (props: ComponentPropsWithoutRef<"ul">) => (
     <ul
-      className="mb-5 list-disc pl-6 text-foreground/80 leading-[1.7]"
+      className="text-foreground/80 mb-5 list-disc pl-6 leading-[1.7]"
       {...props}
     />
   ),
   ol: (props: ComponentPropsWithoutRef<"ol">) => (
     <ol
-      className="mb-5 list-decimal pl-6 text-foreground/80 leading-[1.7]"
+      className="text-foreground/80 mb-5 list-decimal pl-6 leading-[1.7]"
       {...props}
     />
   ),
@@ -55,7 +57,7 @@ export const mdxComponents = {
   ),
   blockquote: (props: ComponentPropsWithoutRef<"blockquote">) => (
     <blockquote
-      className="mb-5 border-muted border-l-2 pl-4 text-muted-foreground italic"
+      className="border-muted text-muted-foreground mb-5 border-l-2 pl-4 italic"
       {...props}
     />
   ),

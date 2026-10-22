@@ -4,7 +4,7 @@ import type { ReactNode } from "react";
 import { AnimatedText } from "@/components/animated-text";
 
 const SerifAccent = ({ children }: { children: ReactNode }) => (
-  <span className="font-serif text-white italic leading-relaxed">
+  <span className="font-serif leading-relaxed text-white italic">
     {children}
   </span>
 );
@@ -16,7 +16,7 @@ export const LandingHero = () => (
     </AnimatedText>
 
     <AnimatedText className="mt-4.5" delay={0.15}>
-      <p className="text-2xl text-foreground/80 leading-relaxed">
+      <p className="text-foreground/80 text-2xl leading-relaxed">
         I am <SerifAccent>Hassam</SerifAccent>, a{" "}
         <SerifAccent>software engineer</SerifAccent> with a passion for gaming,
         and sometimes writing.
@@ -24,10 +24,10 @@ export const LandingHero = () => (
     </AnimatedText>
 
     <AnimatedText className="mt-4.5" delay={0.3}>
-      <p className="text-2xl text-foreground/80 leading-relaxed">
+      <p className="text-foreground/80 text-2xl leading-relaxed">
         Currently at{" "}
         <a
-          className="transition-colors hover:text-foreground"
+          className="hover:text-foreground transition-colors"
           href="https://imagine.art"
           rel="noopener noreferrer"
           target="_blank"
@@ -36,7 +36,7 @@ export const LandingHero = () => (
         </a>
         .{" "}
         <Link
-          className="font-bold text-white transition-colors hover:text-foreground/60"
+          className="hover:text-foreground/60 font-bold text-white transition-colors"
           to="/blog"
         >
           Thoughts

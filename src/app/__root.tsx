@@ -7,6 +7,7 @@ import {
 
 import { Glow } from "@/components/glow";
 import { SiteFooter } from "@/components/site-footer";
+
 import "./globals.css";
 
 export const RootLayout = () => (
@@ -14,7 +15,7 @@ export const RootLayout = () => (
     <head>
       <HeadContent />
     </head>
-    <body className="noise isolate relative min-h-screen overflow-x-clip bg-background font-sans text-foreground">
+    <body className="noise bg-background text-foreground relative isolate min-h-screen overflow-x-clip font-sans">
       <Glow />
       <Outlet />
       <SiteFooter />

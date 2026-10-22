@@ -21,7 +21,7 @@ export const PostListItem = ({
       params={{ slug }}
       to="/blog/$slug"
     >
-      <span className="font-serif text-foreground/90 italic">{symbol}</span>
+      <span className="text-foreground/90 font-serif italic">{symbol}</span>
       <span className="text-foreground/90">{title}</span>
     </Link>
   </AnimatedText>

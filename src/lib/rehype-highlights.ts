@@ -17,7 +17,7 @@ export const rehypeHighlights = () => (tree: Root) => {
     if (pre.tagName !== "pre" || code?.type !== "element" || !parent) return;
 
     const lang = String(code.properties.className ?? "").match(
-      /language-([\w-]+)/
+      /language-([\w-]+)/,
     )?.[1];
     if (!lang || !isSupportedLanguage(lang) || index === undefined) return;
 
