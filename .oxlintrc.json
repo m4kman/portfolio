@@ -1,9 +1,13 @@
 {
   "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "ignorePatterns": [
-    "src/routeTree.gen.ts"
-  ],
-  "rules": {
-    "func-style": "off"
-  }
+  "ignorePatterns": ["src/routeTree.gen.ts"],
+  "plugins": [
+    "eslint",
+    "typescript",
+    "unicorn",
+    "oxc",
+    "import",
+    "react",
+    "jsx-a11y"
+  ]
 }
