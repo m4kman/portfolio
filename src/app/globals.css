@@ -33,8 +33,8 @@
   --sidebar-accent-foreground: #1c1c1c;
   --sidebar-border: #dcdcdc;
   --sidebar-ring: #a0a0a0;
-  --font-sans: "Inter var", sans-serif;
-  --font-serif: "Georgia", serif;
+  --font-sans: "Instrument Sans", sans-serif;
+  --font-serif: "Instrument Serif", serif;
   --font-mono: "Fira Code", monospace;
   --radius: 0.5rem;
   --shadow-x: 0px;
@@ -93,8 +93,8 @@
   --sidebar-accent-foreground: #e3e3e3;
   --sidebar-border: #2a2a2a;
   --sidebar-ring: #5f5f5f;
-  --font-sans: "Inter var", sans-serif;
-  --font-serif: "Georgia", serif;
+  --font-sans: "Instrument Sans", sans-serif;
+  --font-serif: "Instrument Serif", serif;
   --font-mono: "Fira Code", monospace;
   --radius: 0.5rem;
   --shadow-x: 0px;
@@ -169,4 +169,90 @@
   --shadow-lg: var(--shadow-lg);
   --shadow-xl: var(--shadow-xl);
   --shadow-2xl: var(--shadow-2xl);
+}
+
+html {
+  overscroll-behavior-y: none;
+}
+
+.noise::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  opacity: 0.63;
+  background-image: url("/noise.png");
+  background-repeat: repeat;
+  background-size: 512px 512px;
+}
+
+.glow {
+  position: absolute;
+  top: -28px;
+  left: 5%;
+  right: 5%;
+  height: 48px;
+  pointer-events: none;
+  z-index: 0;
+  animation:
+    glow-in 0.8s ease-out 0.1s both,
+    glow-sway 13s ease-in-out infinite;
+}
+
+/* Entrance on document load only — the root layout never remounts on
+   client-side navigation, so this runs once per full page load */
+@keyframes glow-in {
+  from {
+    opacity: 0;
+    translate: 0 -40px;
+  }
+  to {
+    opacity: 1;
+    translate: 0 0;
+  }
+}
+
+.glow::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(10, 10, 10, 1) 0%,
+    rgba(70, 205, 178, 0.5) 15%,
+    rgba(93, 228, 199, 0.65) 50%,
+    rgba(70, 205, 178, 0.5) 85%,
+    rgba(10, 10, 10, 1) 100%
+  );
+  filter: blur(24px);
+  animation: glow-breathe 8s ease-in-out infinite;
+}
+
+@keyframes glow-sway {
+  0%,
+  100% {
+    transform: translateX(-1.5%);
+  }
+  50% {
+    transform: translateX(1.5%);
+  }
+}
+
+@keyframes glow-breathe {
+  0%,
+  100% {
+    opacity: 0.45;
+    transform: scaleY(0.9);
+  }
+  50% {
+    opacity: 0.7;
+    transform: scaleY(1);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
 }

@@ -1,14 +1,29 @@
+import mdx from "@mdx-js/rollup";
 import tailwindcss from "@tailwindcss/vite";
 import { tanstackStart } from "@tanstack/react-start/plugin/vite";
 import viteReact from "@vitejs/plugin-react";
-// vite.config.ts
+import remarkFrontmatter from "remark-frontmatter";
+import remarkMdxFrontmatter from "remark-mdx-frontmatter";
 import { defineConfig } from "vite";
-import tsconfigPaths from "vite-tsconfig-paths";
+
+import { rehypeHighlights } from "./src/lib/rehype-highlights.ts";
+
+const mdxPlugin = mdx({
+  remarkPlugins: [remarkFrontmatter, remarkMdxFrontmatter],
+  rehypePlugins: [rehypeHighlights],
+});
 
 export default defineConfig({
   plugins: [
     tailwindcss(),
-    tsconfigPaths(),
+    {
+      enforce: "pre",
+      ...mdxPlugin,
+      // @mdx-js/rollup strips the query before matching, so it would also
+      // compile `.mdx?raw` imports (used for TOC headings) into components.
+      transform: (code, id) =>
+        /[?&]raw\b/.test(id) ? undefined : mdxPlugin.transform(code, id),
+    },
     tanstackStart({
       router: {
         routesDirectory: "app",
@@ -17,6 +32,9 @@ export default defineConfig({
     }),
     viteReact(),
   ],
+  resolve: {
+    tsconfigPaths: true,
+  },
   server: {
     port: 3000,
   },

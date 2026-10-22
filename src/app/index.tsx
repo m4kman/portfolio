@@ -1,9 +1,11 @@
 import { createFileRoute } from "@tanstack/react-router";
 
-const Home = () => (
-  <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black text-white">
-    A fresh start
-  </div>
+import { LandingHero } from "@/components/landing/landing-hero";
+
+export const Home = () => (
+  <main className="flex min-h-screen items-center justify-center px-6">
+    <LandingHero />
+  </main>
 );
 
 export const Route = createFileRoute("/")({

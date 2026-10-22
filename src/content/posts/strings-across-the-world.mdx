@@ -1,0 +1,31 @@
+---
+title: "Strings across the world — a tale of translation"
+date: "2025-11-08"
+description: "When you build a product used across countries, you quickly realize that text isn't just text."
+slug: "strings-across-the-world"
+---
+
+When you build a product used across countries, you quickly realize that text isn't just text. It's context, culture, and sometimes... chaos.
+
+Recently, our team faced a fascinating issue that perfectly captured the quirks of building a global product: a seemingly harmless interaction with Google Translate caused unexpected behavior in our app — and reminded us how powerful (and tricky) language handling can be.
+
+## The Setup: A Truly Global Product
+
+Our product serves users from all over the world — from São Paulo to Seoul, Berlin to Bangalore. That's amazing for reach, but it also means we rely heavily on translations and localized strings to make sure the experience feels natural everywhere.
+
+Most of our strings are maintained through a localization pipeline, with automated tools and translators working hand-in-hand. For the most part, everything just works — until it doesn't.
+
+## The Incident: When Translation Got Too Smart
+
+One day, we noticed something strange: users in certain regions were reporting broken buttons and missing labels. At first, it looked like a CSS issue or maybe a caching bug. But as we dug deeper, we realized that the problem wasn't in our code at all — it was in the text.
+
+Our debugging trail led us to discover that some of our dynamically generated strings were being auto-translated by Google Translate — either via the browser's built-in translation feature or by third-party integrations — and that translation subtly changed the meaning or structure of key phrases.
+
+```ts
+// Imagine relying on this as a fixed identifier
+const actionKey = "Submit";
+// But Google Translate turns it into "Soumettre" or "Enviar"
+// suddenly your app can't find the right element
+```
+
+In one memorable case, a simple English word we used as an internal key was translated into its local equivalent — breaking our logic because that key wasn't supposed to change at all.
