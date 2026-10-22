@@ -13,12 +13,11 @@
 # testing
 /coverage
 
-# next.js
-/.next/
-/out/
-
-# production
-/build
+# build output
+/dist
+/.output
+/.nitro
+/.tanstack
 
 # misc
 .DS_Store
@@ -38,4 +37,9 @@ yarn-error.log*
 
 # typescript
 *.tsbuildinfo
-next-env.d.ts
+
+# local agent session artifacts
+/.superpowers
+
+/.agents
+/docs
