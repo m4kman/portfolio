@@ -1,3 +1,4 @@
+import { cloudflare } from "@cloudflare/vite-plugin";
 import mdx from "@mdx-js/rollup";
 import tailwindcss from "@tailwindcss/vite";
 import { tanstackStart } from "@tanstack/react-start/plugin/vite";
@@ -24,6 +25,7 @@ export default defineConfig({
       transform: (code, id) =>
         /[?&]raw\b/.test(id) ? undefined : mdxPlugin.transform(code, id),
     },
+    cloudflare({ viteEnvironment: { name: "ssr" } }),
     tanstackStart({
       router: {
         routesDirectory: "app",
