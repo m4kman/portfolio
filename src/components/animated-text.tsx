@@ -12,7 +12,7 @@ export const AnimatedText = ({
   <motion.div
     animate={{ opacity: 1, filter: "blur(0px)", y: 0 }}
     initial={{ opacity: 0, filter: "blur(8px)", y: 10 }}
-    transition={{ duration: 0.7, ease: "easeOut", delay }}
+    transition={{ duration: 0.3, ease: "easeOut", delay }}
     {...props}
   >
     {children}

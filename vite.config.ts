@@ -27,6 +27,9 @@ export default defineConfig({
     },
     cloudflare({ viteEnvironment: { name: "ssr" } }),
     tanstackStart({
+      prerender: {
+        enabled: true,
+      },
       router: {
         routesDirectory: "app",
       },

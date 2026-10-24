@@ -15,7 +15,7 @@ export const LandingHero = () => (
       <h1 className="font-serif text-4xl text-white italic">Hi,</h1>
     </AnimatedText>
 
-    <AnimatedText className="mt-4.5" delay={0.15}>
+    <AnimatedText className="mt-4.5" delay={0.1}>
       <p className="text-foreground/80 text-2xl leading-relaxed">
         I am <SerifAccent>Hassam</SerifAccent>, a{" "}
         <SerifAccent>software engineer</SerifAccent> with a passion for gaming,
@@ -23,7 +23,7 @@ export const LandingHero = () => (
       </p>
     </AnimatedText>
 
-    <AnimatedText className="mt-4.5" delay={0.3}>
+    <AnimatedText className="mt-4.5" delay={0.2}>
       <p className="text-foreground/80 text-2xl leading-relaxed">
         Currently at{" "}
         <a
