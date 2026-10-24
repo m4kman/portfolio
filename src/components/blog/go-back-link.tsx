@@ -9,7 +9,7 @@ export const GoBackLink = () => (
       to="/blog"
     >
       <span aria-hidden="true">←</span>
-      Go back
+      more thoughts
     </Link>
   </AnimatedText>
 );
