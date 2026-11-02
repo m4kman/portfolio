@@ -187,6 +187,27 @@ html {
   background-size: 512px 512px;
 }
 
+.trail-scrim {
+  position: fixed;
+  inset-inline: 0;
+  bottom: 0;
+  z-index: 10;
+  height: calc(7.5rem + env(safe-area-inset-bottom));
+  pointer-events: none;
+  background-color: var(--background);
+  mask-image: linear-gradient(to top, black 45%, transparent);
+}
+
+.trail-scrim::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: 0.63;
+  background-image: url("/noise.png");
+  background-repeat: repeat;
+  background-size: 512px 512px;
+}
+
 .glow {
   position: absolute;
   top: -28px;
