@@ -17,7 +17,7 @@ const BlogPost = () => {
   const { frontmatter, Component } = post;
 
   return (
-    <main className="mx-auto max-w-2xl px-6 pt-24 pb-32">
+    <main className="mx-auto max-w-2xl px-6 pt-24 pb-32 text-pretty">
       <BlogPostHeader date={frontmatter.date} title={frontmatter.title} />
       <div className="relative mt-10">
         <TableOfContents headings={headings} />

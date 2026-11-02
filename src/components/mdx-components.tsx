@@ -67,9 +67,9 @@ export const mdxComponents = {
       {...props}
     />
   ),
-  pre: (props: ComponentPropsWithoutRef<"pre">) => (
+  pre: ({ className, ...props }: ComponentPropsWithoutRef<"pre">) => (
     <pre
-      className="mb-5 overflow-x-auto rounded-lg p-4 text-sm leading-relaxed [&>code]:bg-transparent [&>code]:p-0"
+      className={`mb-5 max-w-full overflow-x-auto rounded-lg p-4 text-sm leading-relaxed [&>code]:bg-transparent [&>code]:p-0 ${className ?? ""}`}
       {...props}
     />
   ),
