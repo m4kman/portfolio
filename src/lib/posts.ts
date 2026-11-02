@@ -1,13 +1,21 @@
 /// <reference types="vite/client" />
 import type { ComponentType } from "react";
 
-import { parseHeadings, type PostHeading } from "./parse-headings";
-
 export type PostFrontmatter = {
   title: string;
   date: string;
   description: string;
   slug: string;
+};
+
+export type PostHeading = {
+  id: string;
+  text: string;
+};
+
+export type PostMeta = {
+  frontmatter: PostFrontmatter;
+  headings: PostHeading[];
 };
 
 export type MDXContentComponent = ComponentType<{
@@ -17,38 +25,26 @@ export type MDXContentComponent = ComponentType<{
 type MDXModule = {
   default: MDXContentComponent;
   frontmatter: PostFrontmatter;
+  headings: PostHeading[];
 };
 
 const modules = import.meta.glob<MDXModule>("../content/posts/*.mdx", {
   eager: true,
 });
 
-const rawModules = import.meta.glob<string>("../content/posts/*.mdx", {
-  eager: true,
-  import: "default",
-  query: "?raw",
-});
-
-export const getPostHeadings = (slug: string): PostHeading[] => {
-  const path = Object.keys(modules).find(
-    (key) => modules[key].frontmatter.slug === slug,
-  );
-  if (!path) return [];
-  const raw = rawModules[path];
-  return raw ? parseHeadings(raw) : [];
-};
+const postsBySlug = new Map(
+  Object.values(modules).map((mod) => [mod.frontmatter.slug, mod]),
+);
 
 export const getPosts = (): PostFrontmatter[] =>
-  Object.values(modules)
+  [...postsBySlug.values()]
     .map((mod) => mod.frontmatter)
     .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 
-export const getPost = (
-  slug: string,
-): { frontmatter: PostFrontmatter; Component: MDXContentComponent } | null => {
-  const entry = Object.values(modules).find(
-    (mod) => mod.frontmatter.slug === slug,
-  );
-  if (!entry) return null;
-  return { frontmatter: entry.frontmatter, Component: entry.default };
+export const getPostMeta = (slug: string): PostMeta | null => {
+  const mod = postsBySlug.get(slug);
+  return mod ? { frontmatter: mod.frontmatter, headings: mod.headings } : null;
 };
+
+export const getPostContent = (slug: string): MDXContentComponent | null =>
+  postsBySlug.get(slug)?.default ?? null;

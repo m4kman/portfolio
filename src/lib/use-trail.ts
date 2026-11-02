@@ -11,7 +11,7 @@ const SIGNATURE: Crumb = { label: "m4kman", to: "/" };
 export const useTrail = (): Crumb[] => {
   const postTitle = useMatch({
     from: "/blog/$slug",
-    select: (match) => match.loaderData?.title,
+    select: (match) => match.loaderData?.frontmatter.title,
     shouldThrow: false,
   });
   const isBlogIndex = useMatch({

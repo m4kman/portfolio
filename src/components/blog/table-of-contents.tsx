@@ -1,6 +1,6 @@
 import { AnimatedText } from "@/components/animated-text";
 import { TocLink } from "@/components/blog/toc-link";
-import type { PostHeading } from "@/lib/parse-headings";
+import type { PostHeading } from "@/lib/posts";
 import { useActiveHeading } from "@/lib/use-active-heading";
 
 type TableOfContentsProps = {
