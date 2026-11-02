@@ -8,22 +8,21 @@ import remarkMdxFrontmatter from "remark-mdx-frontmatter";
 import { defineConfig } from "vite";
 
 import { rehypeHighlights } from "./src/lib/rehype-highlights.ts";
-
-const mdxPlugin = mdx({
-  remarkPlugins: [remarkFrontmatter, remarkMdxFrontmatter],
-  rehypePlugins: [rehypeHighlights],
-});
+import { remarkHeadings } from "./src/lib/remark-headings.ts";
 
 export default defineConfig({
   plugins: [
     tailwindcss(),
     {
       enforce: "pre",
-      ...mdxPlugin,
-      // @mdx-js/rollup strips the query before matching, so it would also
-      // compile `.mdx?raw` imports (used for TOC headings) into components.
-      transform: (code, id) =>
-        /[?&]raw\b/.test(id) ? undefined : mdxPlugin.transform(code, id),
+      ...mdx({
+        remarkPlugins: [
+          remarkFrontmatter,
+          remarkMdxFrontmatter,
+          remarkHeadings,
+        ],
+        rehypePlugins: [rehypeHighlights],
+      }),
     },
     cloudflare({ viteEnvironment: { name: "ssr" } }),
     tanstackStart({

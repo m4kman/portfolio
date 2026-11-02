@@ -1,29 +1,9 @@
-import {
-  type ComponentPropsWithoutRef,
-  isValidElement,
-  type ReactNode,
-} from "react";
-
-import { slugify } from "@/lib/slugify";
-
-const getNodeText = (node: ReactNode): string => {
-  if (typeof node === "string" || typeof node === "number") {
-    return String(node);
-  }
-  if (Array.isArray(node)) {
-    return node.map(getNodeText).join("");
-  }
-  if (isValidElement<{ children?: ReactNode }>(node)) {
-    return getNodeText(node.props.children);
-  }
-  return "";
-};
+import type { ComponentPropsWithoutRef } from "react";
 
 export const mdxComponents = {
   h2: ({ children, ...props }: ComponentPropsWithoutRef<"h2">) => (
     <h2
       className="mt-10 mb-4 scroll-mt-24 font-serif text-2xl font-bold text-white"
-      id={slugify(getNodeText(children))}
       {...props}
     >
       {children}
